@@ -131,3 +131,12 @@ dist
 
 # Replit debugger
 .breakpoints
+
+# Replit specific
+.replit
+.config
+.upm
+.local
+
+# Vercel
+.vercel
