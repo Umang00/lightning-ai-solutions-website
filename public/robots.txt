@@ -1,0 +1,15 @@
+# robots.txt for Lightning AI Solutions
+# https://lightningai.solutions
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://lightningai.solutions/sitemap.xml
+
+# Crawl-delay for specific bots (optional)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
