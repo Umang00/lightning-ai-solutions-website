@@ -76,7 +76,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <head>
+      <body className={inter.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -119,8 +119,6 @@ export default function RootLayout({
             }),
           }}
         />
-      </head>
-      <body className={inter.className}>
         <Header />
         <main className="min-h-screen pt-16">
           {children}

@@ -124,7 +124,7 @@ Location: Delhi, India`,
 export default function RefundPolicyPage() {
   return (
     <LegalPage
-      title: "Refund Policy"
+      title="Refund Policy"
       lastUpdated="October 26, 2025"
       sections={sections}
     />
