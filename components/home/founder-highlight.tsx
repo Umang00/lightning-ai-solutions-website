@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { FOUNDER, COMPANY } from "@/lib/constants";
 import { LinkedinIcon, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,9 +22,15 @@ export function FounderHighlight() {
           >
             <div className="relative aspect-square max-w-md mx-auto lg:mx-0">
               <div className="absolute inset-0 bg-gradient-to-br from-primary-blue to-primary-purple rounded-2xl opacity-20 blur-2xl" />
-              <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/50 flex items-center justify-center overflow-hidden">
-                {/* Placeholder for founder image */}
-                <div className="text-8xl">👨‍💼</div>
+              <div className="relative w-full h-full rounded-2xl border border-slate-700/50 overflow-hidden">
+                <Image
+                  src="/founder.png"
+                  alt={FOUNDER.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 448px"
+                  className="object-cover"
+                  priority
+                />
                 <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-slate-900 to-transparent" />
               </div>
             </div>
