@@ -32,11 +32,11 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact">
+            <a href="https://calendly.com/umangthakkar005/30min" target="_blank" rel="noopener noreferrer">
               <Button size="sm" className="bg-gradient-to-r from-primary-blue to-primary-purple hover:opacity-90 transition-opacity">
                 Start Your Project
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -68,11 +68,17 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link href="/contact" className="block" onClick={() => setMobileMenuOpen(false)}>
+            <a 
+              href="https://calendly.com/umangthakkar005/30min" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block" 
+              onClick={() => setMobileMenuOpen(false)}
+            >
               <Button className="w-full bg-gradient-to-r from-primary-blue to-primary-purple hover:opacity-90 transition-opacity">
                 Start Your Project
               </Button>
-            </Link>
+            </a>
           </div>
         )}
       </nav>

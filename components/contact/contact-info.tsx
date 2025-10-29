@@ -78,7 +78,9 @@ export function ContactInfo() {
           explore how we can help.
         </p>
         <a
-          href={`mailto:${COMPANY.email}?subject=Free Consultation Request`}
+          href="https://calendly.com/umangthakkar005/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center text-sm font-semibold text-primary-blue hover:underline"
         >
           Schedule a call →

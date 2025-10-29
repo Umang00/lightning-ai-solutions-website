@@ -81,7 +81,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <Link href="/contact">
+          <a href="https://calendly.com/umangthakkar005/30min" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-gradient-to-r from-primary-blue to-primary-purple hover:opacity-90 transition-opacity group"
@@ -89,7 +89,7 @@ export function Hero() {
               Start Your Project
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </a>
           <Link href="/projects">
             <Button size="lg" variant="outline">
               View Our Work

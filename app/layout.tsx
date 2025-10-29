@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieConsent } from "@/components/layout/cookie-consent";
-import { CalendlyWidget } from "@/components/calendly-widget";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -126,7 +125,6 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieConsent />
-        <CalendlyWidget />
         <Toaster />
       </body>
     </html>

@@ -172,12 +172,12 @@ export function ServicesList() {
                     </div>
                   </div>
 
-                  <Link href="/contact">
+                  <a href="https://calendly.com/umangthakkar005/30min" target="_blank" rel="noopener noreferrer">
                     <Button variant="outline" className="group">
                       Get Started
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             );
