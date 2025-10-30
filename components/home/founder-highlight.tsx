@@ -88,7 +88,7 @@ export function FounderHighlight() {
             {/* Key Metrics */}
             <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-slate-700/50">
               <div>
-                <div className="text-2xl font-bold text-primary-blue mb-1">{FOUNDER.experience}+</div>
+                <div className="text-2xl font-bold text-primary-blue mb-1">{FOUNDER.experience}</div>
                 <div className="text-sm text-text-tertiary">Years Building AI</div>
               </div>
               <div>
