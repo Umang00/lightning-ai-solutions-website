@@ -8,7 +8,7 @@ import { ArrowRight, CheckCircle2 } from "lucide-react";
 const reasons = [
   {
     title: "Proven Track Record",
-    description: "7+ AI products in production, 50,000+ users served, 200% engagement boosts delivered",
+    description: "7+ AI products in production, 5M+ users served, 200% engagement boosts delivered",
   },
   {
     title: "End-to-End Expertise",
@@ -69,7 +69,7 @@ export function WhyWorkWithUs() {
               </div>
               <div className="flex items-center gap-3 text-text-secondary">
                 <div className="w-12 h-12 rounded-lg bg-primary-yellow/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl font-bold text-primary-yellow">50K+</span>
+                  <span className="text-2xl font-bold text-primary-yellow">5M+</span>
                 </div>
                 <span>Users benefiting from our AI solutions daily</span>
               </div>

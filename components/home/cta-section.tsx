@@ -90,7 +90,7 @@ export function CTASection() {
                 <div className="text-sm text-text-tertiary">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">50K+</div>
+                <div className="text-3xl font-bold text-primary-blue mb-2">5M+</div>
                 <div className="text-sm text-text-tertiary">Users Served</div>
               </div>
               <div className="text-center">

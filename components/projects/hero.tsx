@@ -57,7 +57,7 @@ export function ProjectsHero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto mb-10"
         >
-          7+ production-ready AI solutions serving 50,000+ users daily
+          7+ production-ready AI solutions serving 5M+ users daily
         </motion.p>
 
         {/* Category Filters */}

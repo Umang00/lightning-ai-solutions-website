@@ -23,7 +23,7 @@ export function FounderProfile() {
             </span>
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            The mind behind 7+ AI products serving 50,000+ users
+            The mind behind 7+ AI products serving 5M+ users
           </p>
         </motion.div>
 

@@ -22,7 +22,7 @@ const stats: Stat[] = [
   },
   {
     icon: Users,
-    value: 50000,
+    value: 5000000,
     suffix: "+",
     label: "Users Reached",
     description: "Active users across all deployed AI products",

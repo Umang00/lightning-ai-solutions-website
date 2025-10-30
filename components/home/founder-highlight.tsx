@@ -66,7 +66,7 @@ export function FounderHighlight() {
               </p>
               <p>
                 His work has driven 200% engagement increases, 70% cost reductions, and powered
-                platforms serving 50,000+ users daily.
+                platforms serving 5M+ users daily.
               </p>
             </div>
 
@@ -96,7 +96,7 @@ export function FounderHighlight() {
                 <div className="text-sm text-text-tertiary">Products Launched</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-primary-blue mb-1">50K+</div>
+                <div className="text-2xl font-bold text-primary-blue mb-1">5M+</div>
                 <div className="text-sm text-text-tertiary">Users Impacted</div>
               </div>
             </div>

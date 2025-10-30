@@ -40,7 +40,7 @@ export function CompanyStory() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             What started as a vision to democratize AI has evolved into a track record of 7+
-            successful AI products serving 50,000+ users. From voice agents automating 100+ daily
+            successful AI products serving 5M+ users. From voice agents automating 100+ daily
             interviews to LLM-powered platforms driving 200% engagement increases, we've proven that
             AI can transform businesses when implemented thoughtfully.
           </motion.p>

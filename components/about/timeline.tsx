@@ -28,7 +28,7 @@ const milestones = [
       "Voice agent handling 100+ daily interviews",
       "70% cost reduction for enterprise client",
       "7+ products in production",
-      "50,000+ users served",
+      "5M+ users served",
     ],
   },
   {

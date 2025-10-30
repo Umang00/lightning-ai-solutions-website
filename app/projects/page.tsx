@@ -4,7 +4,7 @@ import { ProjectGrid } from "@/components/projects/project-grid";
 
 export const metadata = {
   title: "Projects - Lightning AI Solutions",
-  description: "Explore our portfolio of 7+ AI products including Astro AI, voice agents, LLM solutions, and intelligent automation platforms serving 50,000+ users.",
+  description: "Explore our portfolio of 7+ AI products including Astro AI, voice agents, LLM solutions, and intelligent automation platforms serving 5M+ users.",
 };
 
 export default function ProjectsPage() {
