@@ -15,7 +15,7 @@ export const FOUNDER = {
   name: "Umang Thakkar",
   title: "AI Product Manager & Builder",
   experience: "4+",
-  linkedin: "#",
+  linkedin: "https://www.linkedin.com/in/umang-thakkar-90a4a5164/",
 } as const;
 
 // Social Links
