@@ -1,14 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Search } from "lucide-react";
-import { useState } from "react";
+import { Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const categories = ["All", "Voice AI", "LLM", "Analytics", "Automation", "WhatsApp"];
 
-export function ProjectsHero() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+interface ProjectsHeroProps {
+  selectedCategory: string;
+  setSelectedCategory: (category: string) => void;
+}
+
+export function ProjectsHero({ selectedCategory, setSelectedCategory }: ProjectsHeroProps) {
 
   return (
     <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary-slate to-primary-dark">

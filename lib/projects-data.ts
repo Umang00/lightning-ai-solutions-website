@@ -18,6 +18,7 @@ export interface Project {
   role: string;
   status: string;
   tags: string[];
+  categories: string[];
   gradient: string;
   metrics: ProjectMetric[];
   
@@ -52,6 +53,7 @@ export const ALL_PROJECTS: Project[] = [
     role: "Founder, Solo Product Manager & Full-Stack Developer",
     status: "Active Development for WhatsApp Launch",
     tags: ["OpenAI GPT-4", "WhatsApp API", "LLM Fine-tuning", "RAG Pipeline", "Python", "PostgreSQL"],
+    categories: ["LLM", "WhatsApp"],
     gradient: "from-purple-600 to-blue-600",
     metrics: [
       { metric: "200%", label: "Engagement Boost" },
@@ -133,6 +135,7 @@ export const ALL_PROJECTS: Project[] = [
     role: "Lead Product Manager & Algorithm Designer",
     status: "Deployed & Live (Serving 100K+ users)",
     tags: ["Python", "PostgreSQL", "MBTI", "Algorithm Design", "Product Strategy"],
+    categories: ["LLM", "Automation"],
     gradient: "from-cyan-600 to-blue-600",
     metrics: [
       { metric: "200%", label: "Session Time Increase" },
@@ -178,6 +181,7 @@ export const ALL_PROJECTS: Project[] = [
     role: "Solo Product Manager & Full-Stack Developer",
     status: "Deployed & Active (50+ daily interviews)",
     tags: ["ElevenLabs", "OpenAI GPT-4", "Whisper", "Twilio", "Python"],
+    categories: ["Voice AI", "LLM"],
     gradient: "from-blue-600 to-purple-600",
     metrics: [
       { metric: "70%", label: "Cost Reduction" },
@@ -224,6 +228,7 @@ export const ALL_PROJECTS: Project[] = [
     role: "Solo Product Manager & Data Engineer",
     status: "Deployed & Active (Daily usage)",
     tags: ["Retool", "OpenAI GPT-4", "PostgreSQL", "Analytics", "Social Media APIs"],
+    categories: ["Analytics", "Automation"],
     gradient: "from-yellow-600 to-orange-600",
     metrics: [
       { metric: "$1K+", label: "Monthly Savings" },
@@ -270,6 +275,7 @@ export const ALL_PROJECTS: Project[] = [
     role: "Solo AI Product Manager & ML Engineer",
     status: "Deployed & Live (50K+ daily conversations)",
     tags: ["OpenAI GPT-3.5", "LLM Fine-tuning", "MBTI", "Conversational AI", "Python"],
+    categories: ["LLM"],
     gradient: "from-green-600 to-cyan-600",
     metrics: [
       { metric: "100%", label: "Session Time Increase" },
@@ -316,6 +322,7 @@ export const ALL_PROJECTS: Project[] = [
     role: "Solo Product Manager & Full-Stack Developer",
     status: "Deployed & Active (8+ months)",
     tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Redis", "Campaign Management"],
+    categories: ["Automation"],
     gradient: "from-pink-600 to-purple-600",
     metrics: [
       { metric: "99%", label: "Launch Time Reduction" },
@@ -362,6 +369,7 @@ export const ALL_PROJECTS: Project[] = [
     role: "Solo Product Manager & Full-Stack Developer",
     status: "Deployed & Live",
     tags: ["React", "Stripe", "MBTI", "Email Marketing", "SEO", "Growth"],
+    categories: ["Automation"],
     gradient: "from-orange-600 to-red-600",
     metrics: [
       { metric: "$1.5K", label: "Monthly Revenue (Mo. 1)" },
