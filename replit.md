@@ -24,6 +24,7 @@ The project utilizes Next.js 14 (App Router) with TypeScript and Tailwind CSS fo
 ### Technical Implementations
 - **Core Layout:** Includes a Header, Footer, Mobile menu, and Cookie banner.
 - **Pages:** Consists of 6 main pages (Homepage, About Us, Projects, Services, Case Studies, Contact) and 4 legal pages (Privacy Policy, Terms of Service, Cookie Policy, Refund Policy) crucial for WhatsApp API compliance.
+- **Legal Pages (Updated Oct 30, 2025):** All 4 legal policies updated with comprehensive dual-purpose B2B/B2C content covering client services and Astro AI subscriptions, including international taxation, GDPR/CCPA compliance, WhatsApp Business API requirements, detailed refund policies, and cookie consent management.
 - **SEO & Optimization:** Comprehensive metadata (Open Graph, Twitter Card, JSON-LD), dynamic sitemap generation, `robots.txt` configuration, and page-level metadata across all routes.
 - **Key Decisions:**
     - Usage of 80% pre-built `shadcn/ui` components.
