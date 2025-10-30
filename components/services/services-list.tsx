@@ -2,13 +2,11 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
     id: "ai-development",
-    image: "/services/ai-development.png",
     title: "AI Product Development",
     tagline: "From concept to production in weeks",
     description:
@@ -25,7 +23,6 @@ const services = [
   },
   {
     id: "llm-finetuning",
-    image: "/services/llm-finetuning.png",
     title: "LLM Fine-tuning",
     tagline: "Custom models trained on your data",
     description:
@@ -42,7 +39,6 @@ const services = [
   },
   {
     id: "voice-agents",
-    image: "/services/voice-agents.png",
     title: "Voice AI Agents",
     tagline: "Natural conversations at scale",
     description:
@@ -59,7 +55,6 @@ const services = [
   },
   {
     id: "automation",
-    image: "/services/intelligent-automation.png",
     title: "Intelligent Automation",
     tagline: "AI-powered workflows that work while you sleep",
     description:
@@ -76,7 +71,6 @@ const services = [
   },
   {
     id: "analytics",
-    image: "/services/ai-analytics.png",
     title: "AI Analytics",
     tagline: "Turn data into decisions",
     description:
@@ -96,92 +90,76 @@ const services = [
 export function ServicesList() {
   return (
     <section className="py-20 bg-primary-slate">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-24">
-          {services.map((service, index) => {
-            const isEven = index % 2 === 0;
-
-            return (
-              <motion.div
-                key={service.id}
-                id={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className={`scroll-mt-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  isEven ? "" : "lg:flex-row-reverse"
-                }`}
-              >
-                {/* Image/Visual Side */}
-                <div className={isEven ? "lg:order-1" : "lg:order-2"}>
-                  <div
-                    className={`relative aspect-[4/3] max-w-md mx-auto lg:mx-${
-                      isEven ? "0" : "auto"
-                    } rounded-2xl overflow-hidden`}
-                  >
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  </div>
-                </div>
-
-                {/* Content Side */}
-                <div className={isEven ? "lg:order-2" : "lg:order-1"}>
-                  <div
-                    className={`inline-block px-4 py-2 rounded-full bg-primary-blue/10 border border-primary-blue/30 mb-4`}
-                  >
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="space-y-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.id}
+              id={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="scroll-mt-24 p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/30 transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+                {/* Main Content */}
+                <div className="flex-1">
+                  <div className="inline-block px-4 py-2 rounded-full bg-primary-blue/10 border border-primary-blue/30 mb-4">
                     <span className="text-sm text-primary-blue font-semibold">
                       {service.tagline}
                     </span>
                   </div>
 
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4 text-text-primary">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-3 text-text-primary">
                     {service.title}
                   </h2>
 
-                  <p className="text-lg text-text-secondary mb-6">{service.description}</p>
+                  <p className="text-base text-text-secondary mb-6">{service.description}</p>
 
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-text-primary mb-3">What You Get:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-start text-text-secondary">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary-blue mt-2 mr-3 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    {/* Features */}
+                    <div>
+                      <h4 className="font-semibold text-text-primary mb-3 text-sm">What You Get:</h4>
+                      <ul className="space-y-2">
+                        {service.features.map((feature, i) => (
+                          <li key={i} className="flex items-start text-sm text-text-secondary">
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary-blue mt-2 mr-3 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-text-primary mb-3">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.technologies.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                    {/* Technologies */}
+                    <div>
+                      <h4 className="font-semibold text-text-primary mb-3 text-sm">Technologies:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {service.technologies.map((tech, i) => (
+                          <span
+                            key={i}
+                            className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
+                </div>
 
+                {/* CTA */}
+                <div className="md:flex-shrink-0">
                   <a href="https://calendly.com/umangthakkar005/30min" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" className="group">
+                    <Button variant="outline" className="group w-full md:w-auto">
                       Get Started
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                   </a>
                 </div>
-              </motion.div>
-            );
-          })}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
