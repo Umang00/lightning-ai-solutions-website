@@ -16,6 +16,42 @@ interface LegalPageProps {
   sections: Section[];
 }
 
+// Helper function to parse simple markdown bold syntax
+function parseMarkdownBold(text: string) {
+  const parts: (string | JSX.Element)[] = [];
+  const lines = text.split('\n');
+  
+  lines.forEach((line, lineIndex) => {
+    const lineParts: (string | JSX.Element)[] = [];
+    let lastIndex = 0;
+    const regex = /\*\*(.*?)\*\*/g;
+    let match;
+    
+    while ((match = regex.exec(line)) !== null) {
+      // Add text before the match
+      if (match.index > lastIndex) {
+        lineParts.push(line.substring(lastIndex, match.index));
+      }
+      // Add bold text
+      lineParts.push(<strong key={`${lineIndex}-${match.index}`} className="font-semibold text-text-primary">{match[1]}</strong>);
+      lastIndex = regex.lastIndex;
+    }
+    
+    // Add remaining text
+    if (lastIndex < line.length) {
+      lineParts.push(line.substring(lastIndex));
+    }
+    
+    // Add the line parts
+    if (lineIndex > 0) {
+      parts.push(<br key={`br-${lineIndex}`} />);
+    }
+    parts.push(...lineParts);
+  });
+  
+  return parts;
+}
+
 export function LegalPage({ title, lastUpdated, sections }: LegalPageProps) {
   return (
     <div className="min-h-screen bg-primary-dark">
@@ -72,8 +108,8 @@ export function LegalPage({ title, lastUpdated, sections }: LegalPageProps) {
                 <h2 className="text-2xl font-bold text-text-primary mb-4 scroll-mt-24">
                   {section.title}
                 </h2>
-                <div className="text-text-secondary whitespace-pre-line leading-relaxed">
-                  {section.content}
+                <div className="text-text-secondary leading-relaxed">
+                  {parseMarkdownBold(section.content)}
                 </div>
               </motion.div>
             ))}
