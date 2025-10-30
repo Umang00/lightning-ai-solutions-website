@@ -66,7 +66,7 @@ export function FounderHighlight() {
               </p>
               <p>
                 His work has driven 200% engagement increases, 70% cost reductions, and powered
-                platforms serving 5M+ users daily.
+                platforms serving 5M+ users.
               </p>
             </div>
 
