@@ -36,37 +36,14 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-          {/* Project Visual */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/50 overflow-hidden">
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-20`} />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-blue/20 to-primary-purple/20 flex items-center justify-center">
-                    <Icon className="h-16 w-16 text-primary-blue" />
-                  </div>
-                  <div className="text-2xl font-bold bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent">
-                    {project.shortTitle}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Project Details */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-12"
+        >
+          <div className="max-w-4xl mx-auto space-y-8">
             <div>
               <h3 className="text-2xl font-bold text-text-primary mb-4">The Challenge</h3>
               <p className="text-text-secondary">{project.problem}</p>
@@ -106,8 +83,8 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
                 })}
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
 
         {/* Metrics */}
         <motion.div
