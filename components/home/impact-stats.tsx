@@ -36,7 +36,7 @@ const stats: Stat[] = [
   },
   {
     icon: DollarSign,
-    value: 1000,
+    value: 10000,
     suffix: "+",
     label: "Monthly Savings",
     description: "Average cost reduction per client",
