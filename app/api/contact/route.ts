@@ -22,8 +22,8 @@ ${message}
     `;
 
     await resend.emails.send({
-      from: "Lightning AI Solutions <noreply@lightningai.solutions>",
-      to: "hello@lightningai.solutions",
+      from: "Lightning AI Solutions <onboarding@resend.dev>",
+      to: "umangthakkar005@gmail.com",
       subject: `New Contact Form: ${name} - ${service}`,
       text: emailContent,
     });
