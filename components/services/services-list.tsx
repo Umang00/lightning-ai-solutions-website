@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Brain, Mic, Workflow, LineChart, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
     id: "ai-development",
-    icon: Code,
+    image: "/services/ai-development.png",
     title: "AI Product Development",
     tagline: "From concept to production in weeks",
     description:
@@ -25,7 +25,7 @@ const services = [
   },
   {
     id: "llm-finetuning",
-    icon: Brain,
+    image: "/services/llm-finetuning.png",
     title: "LLM Fine-tuning",
     tagline: "Custom models trained on your data",
     description:
@@ -42,7 +42,7 @@ const services = [
   },
   {
     id: "voice-agents",
-    icon: Mic,
+    image: "/services/voice-agents.png",
     title: "Voice AI Agents",
     tagline: "Natural conversations at scale",
     description:
@@ -59,7 +59,7 @@ const services = [
   },
   {
     id: "automation",
-    icon: Workflow,
+    image: "/services/intelligent-automation.png",
     title: "Intelligent Automation",
     tagline: "AI-powered workflows that work while you sleep",
     description:
@@ -76,7 +76,7 @@ const services = [
   },
   {
     id: "analytics",
-    icon: LineChart,
+    image: "/services/ai-analytics.png",
     title: "AI Analytics",
     tagline: "Turn data into decisions",
     description:
@@ -99,7 +99,6 @@ export function ServicesList() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-24">
           {services.map((service, index) => {
-            const Icon = service.icon;
             const isEven = index % 2 === 0;
 
             return (
@@ -114,19 +113,20 @@ export function ServicesList() {
                   isEven ? "" : "lg:flex-row-reverse"
                 }`}
               >
-                {/* Icon/Visual Side */}
+                {/* Image/Visual Side */}
                 <div className={isEven ? "lg:order-1" : "lg:order-2"}>
                   <div
-                    className={`relative aspect-square max-w-md mx-auto lg:mx-${
+                    className={`relative aspect-[4/3] max-w-md mx-auto lg:mx-${
                       isEven ? "0" : "auto"
-                    } rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/50 overflow-hidden`}
+                    } rounded-2xl overflow-hidden`}
                   >
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-20`}
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon className="h-32 w-32 text-primary-blue opacity-50" />
-                    </div>
                   </div>
                 </div>
 
