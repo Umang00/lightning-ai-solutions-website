@@ -57,6 +57,14 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+/* Smooth scrolling with improved performance */
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 /* Focus styles for accessibility */
@@ -64,6 +72,24 @@ html {
   outline: 2px solid var(--primary-blue);
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+/* Improved transitions */
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--primary-blue);
+  color: var(--text-primary);
+}
+
+::-moz-selection {
+  background-color: var(--primary-blue);
+  color: var(--text-primary);
 }
 
 /* Reduced motion for accessibility */

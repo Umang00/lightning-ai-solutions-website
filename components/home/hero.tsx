@@ -84,15 +84,30 @@ export function Hero() {
           <a href="https://calendly.com/umangthakkar005/30min" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-primary-blue to-primary-purple hover:opacity-90 transition-opacity group"
+              className="relative bg-gradient-to-r from-primary-blue to-primary-purple hover:opacity-90 transition-all group overflow-hidden"
             >
-              Start Your Project
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <span className="relative z-10 flex items-center">
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </span>
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-primary-purple to-primary-blue"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: "0%" }}
+                transition={{ duration: 0.3 }}
+              />
             </Button>
           </a>
           <Link href="/projects">
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" className="group">
               View Our Work
+              <motion.span
+                className="ml-2 inline-block"
+                animate={{ rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+              >
+                →
+              </motion.span>
             </Button>
           </Link>
         </motion.div>

@@ -100,7 +100,8 @@ export function ServicesList() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className="scroll-mt-24 p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/30 transition-all duration-300"
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="scroll-mt-24 p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/30 hover:shadow-2xl hover:shadow-primary-blue/10 transition-all duration-300 group"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                 {/* Main Content */}
@@ -123,10 +124,17 @@ export function ServicesList() {
                       <h4 className="font-semibold text-text-primary mb-3 text-sm">What You Get:</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, i) => (
-                          <li key={i} className="flex items-start text-sm text-text-secondary">
-                            <div className="w-1.5 h-1.5 rounded-full bg-primary-blue mt-2 mr-3 flex-shrink-0" />
+                          <motion.li 
+                            key={i} 
+                            className="flex items-start text-sm text-text-secondary"
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.1 }}
+                          >
+                            <div className="w-1.5 h-1.5 rounded-full bg-primary-blue mt-2 mr-3 flex-shrink-0 group-hover:animate-pulse-glow" />
                             {feature}
-                          </li>
+                          </motion.li>
                         ))}
                       </ul>
                     </div>
@@ -136,12 +144,17 @@ export function ServicesList() {
                       <h4 className="font-semibold text-text-primary mb-3 text-sm">Technologies:</h4>
                       <div className="flex flex-wrap gap-2">
                         {service.technologies.map((tech, i) => (
-                          <span
+                          <motion.span
                             key={i}
-                            className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary"
+                            className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary hover:border-primary-blue/30 hover:text-text-secondary transition-all cursor-default"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.05 }}
+                            whileHover={{ scale: 1.1, y: -2 }}
                           >
                             {tech}
-                          </span>
+                          </motion.span>
                         ))}
                       </div>
                     </div>
