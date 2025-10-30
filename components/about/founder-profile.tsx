@@ -105,7 +105,7 @@ export function FounderProfile() {
               <div className="p-6 rounded-xl bg-slate-800/50 border border-slate-700/50">
                 <Award className="h-8 w-8 text-primary-blue mb-3" />
                 <div className="text-2xl font-bold text-primary-blue mb-1">
-                  {FOUNDER.experience}+ Years
+                  {FOUNDER.experience} Years
                 </div>
                 <div className="text-sm text-text-tertiary">Building AI Products</div>
               </div>
