@@ -34,7 +34,7 @@ Individual projects may have separate agreements (SOW, contracts) that supplemen
   },
   {
     title: "2. Services Description",
-    content: `## 2.1 Business Services (B2B)
+    content: `**2.1 Business Services (B2B)**
 
 We provide professional services including:
 - **AI Product Development:** Custom AI applications, LLM integration
@@ -49,7 +49,7 @@ We provide professional services including:
 - Timelines and milestones specified per project
 - Deliverables outlined in Statements of Work (SOW)
 
-## 2.2 Consumer Products (B2C)
+**2.2 Consumer Products (B2C)**
 
 **Astro AI - WhatsApp Astrology Service:**
 - AI-powered Vedic astrology predictions
@@ -63,7 +63,7 @@ We provide professional services including:
 - Maintenance windows communicated in advance
 - May experience temporary disruptions
 
-## 2.3 Service Modifications
+**2.3 Service Modifications**
 
 We reserve the right to:
 - Modify, suspend, or discontinue services anytime
@@ -78,7 +78,7 @@ We reserve the right to:
   },
   {
     title: "3. Account Registration and Security",
-    content: `## 3.1 Account Creation
+    content: `**3.1 Account Creation**
 
 **For B2B Clients:**
 - Provide accurate business information
@@ -90,7 +90,7 @@ We reserve the right to:
 - Provide accurate birth information for calculations
 - One account per phone number
 
-## 3.2 Account Security
+**3.2 Account Security**
 
 **Your Responsibilities:**
 - Maintain confidentiality of credentials
@@ -103,7 +103,7 @@ We reserve the right to:
 - Encrypt sensitive data
 - Monitor for suspicious activity
 
-## 3.3 Account Termination
+**3.3 Account Termination**
 
 **You Can:**
 - Cancel subscription anytime (B2C)
@@ -119,7 +119,7 @@ We reserve the right to:
   },
   {
     title: "4. User Responsibilities and Acceptable Use",
-    content: `## 4.1 General Obligations
+    content: `**4.1 General Obligations**
 
 You agree to:
 - **Provide Accurate Information:** Keep all provided information truthful and current
@@ -127,7 +127,7 @@ You agree to:
 - **Respect Others:** Don't harass, abuse, or harm other users or our staff
 - **Appropriate Use:** Use services only for intended, lawful purposes
 
-## 4.2 Prohibited Activities
+**4.2 Prohibited Activities**
 
 You MAY NOT:
 
@@ -156,7 +156,7 @@ You MAY NOT:
 - Attempt to manipulate or trick the AI
 - Harass or abuse the AI chatbot
 
-## 4.3 Consequences of Violation
+**4.3 Consequences of Violation**
 
 If you violate these terms:
 - **Warning:** First offense typically gets a warning
@@ -167,7 +167,7 @@ If you violate these terms:
   },
   {
     title: "5. Service Agreements and Project Terms (B2B)",
-    content: `## 5.1 Engagement Process
+    content: `**5.1 Engagement Process**
 
 1. **Discovery:** Initial consultation and requirements gathering
 2. **Proposal:** We provide scope, timeline, and pricing
@@ -177,7 +177,7 @@ If you violate these terms:
 6. **Delivery:** Deliverables provided at milestones
 7. **Final Payment:** Upon project completion
 
-## 5.2 Statement of Work (SOW)
+**5.2 Statement of Work (SOW)**
 
 Each project governed by SOW specifying:
 - Detailed scope and deliverables
@@ -186,7 +186,7 @@ Each project governed by SOW specifying:
 - Acceptance criteria
 - Change request process
 
-## 5.3 Change Requests
+**5.3 Change Requests**
 
 **Scope Changes:**
 - Must be requested in writing
@@ -199,7 +199,7 @@ Each project governed by SOW specifying:
 - Timeline adjusted accordingly
 - Documented in change order
 
-## 5.4 Client Responsibilities
+**5.4 Client Responsibilities**
 
 You must:
 - Provide timely feedback (within agreed timeframes)
@@ -216,7 +216,7 @@ If your delays impact project:
   },
   {
     title: "6. Subscription Terms (B2C - Astro AI)",
-    content: `## 6.1 Subscription Plans
+    content: `**6.1 Subscription Plans**
 
 **Monthly Plan:**
 - ₹299/month
@@ -233,7 +233,7 @@ If your delays impact project:
 - 17% savings vs monthly
 - Auto-renews annually
 
-## 6.2 Auto-Renewal
+**6.2 Auto-Renewal**
 
 **How It Works:**
 - Subscriptions automatically renew unless cancelled
@@ -244,7 +244,7 @@ If your delays impact project:
 - Current subscribers: 30 days notice of price changes
 - New subscribers: Pay current rates
 
-## 6.3 Cancellation
+**6.3 Cancellation**
 
 **How to Cancel:**
 - WhatsApp: Message "Cancel subscription"
@@ -260,7 +260,7 @@ If your delays impact project:
 - Can re-subscribe anytime
 - Previous data retained for 2 years
 
-## 6.4 Free Trials (If Offered)
+**6.4 Free Trials (If Offered)**
 
 If we offer free trial:
 - Must provide payment method
@@ -268,7 +268,7 @@ If we offer free trial:
 - Cancel before trial ends to avoid charge
 - One trial per user
 
-## 6.5 Service Features
+**6.5 Service Features**
 
 **What's Included:**
 - Unlimited questions to AI chatbot
@@ -285,7 +285,7 @@ If we offer free trial:
   },
   {
     title: "7. Intellectual Property Rights",
-    content: `## 7.1 Our Intellectual Property
+    content: `**7.1 Our Intellectual Property**
 
 **We Own:**
 - Website, app, and service design
@@ -301,7 +301,7 @@ If we offer free trial:
 - Don't use our trademarks without permission
 - Don't reverse engineer our software
 
-## 7.2 Client IP (B2B Services)
+**7.2 Client IP (B2B Services)**
 
 **You Own:**
 - Data and content you provide us
@@ -323,7 +323,7 @@ If we offer free trial:
 - Improve our methodologies
 - Develop similar solutions for others
 
-## 7.3 Portfolio and Case Studies
+**7.3 Portfolio and Case Studies**
 
 **We May:**
 - Showcase your project in our portfolio (with permission)
@@ -335,7 +335,7 @@ If we offer free trial:
 - You can require NDA before discussions
 - Can ask to remain anonymous in case studies
 
-## 7.4 User Content (Astro AI)
+**7.4 User Content (Astro AI)**
 
 **You Retain Ownership of:**
 - Questions you ask
@@ -352,7 +352,7 @@ If we offer free trial:
 - Share your specific predictions with others
 - Use your personal data for unrelated purposes
 
-## 7.5 Third-Party IP
+**7.5 Third-Party IP**
 
 If project involves third-party content:
 - You're responsible for obtaining rights/licenses
@@ -366,7 +366,7 @@ If project involves third-party content:
   },
   {
     title: "8. Payment Terms",
-    content: `## 8.1 B2B Services - Project Fees
+    content: `**8.1 B2B Services - Project Fees**
 
 **Pricing Models:**
 - **Fixed-Price:** Total project cost agreed upfront
@@ -388,7 +388,7 @@ If project involves third-party content:
 - Covers agreed hours or deliverables
 - Unused hours typically don't roll over
 
-## 8.2 B2C Subscriptions - Astro AI
+**8.2 B2C Subscriptions - Astro AI**
 
 **Payment Methods:**
 - UPI (PhonePe, Google Pay, Paytm) - India only
@@ -423,7 +423,7 @@ If project involves third-party content:
 - Actual charge based on exchange rate at transaction time
 - No price adjustments for currency fluctuations
 
-## 8.3 Invoices and Receipts
+**8.3 Invoices and Receipts**
 
 **B2B:**
 - Invoices include GST (18%)
@@ -436,7 +436,7 @@ If project involves third-party content:
 - Receipt sent via email
 - Available in-app/WhatsApp
 
-## 8.4 Late Payments (B2B)
+**8.4 Late Payments (B2B)**
 
 **Consequences:**
 - **5 days overdue:** Reminder email
@@ -448,7 +448,7 @@ If project involves third-party content:
 - Late payments may accrue 2% monthly interest
 - You're responsible for collection costs
 
-## 8.5 Taxes
+**8.5 Taxes**
 
 **India:**
 - GST (18%) applies to all services
@@ -497,7 +497,7 @@ You are solely responsible for determining and paying any taxes applicable in yo
 - Examples: UK (2%), France (3%), Italy (3%)
 - You're responsible for determining applicability and compliance
 
-## 8.6 Refunds
+**8.6 Refunds**
 
 See our Refund Policy for complete details:
 - B2B: Based on work completed
@@ -506,7 +506,7 @@ See our Refund Policy for complete details:
   },
   {
     title: "9. Confidentiality",
-    content: `## 9.1 What is Confidential Information
+    content: `**9.1 What is Confidential Information**
 
 **From You:**
 - Business plans, strategies, financials
@@ -521,7 +521,7 @@ See our Refund Policy for complete details:
 - Source code and algorithms
 - Business plans
 
-## 9.2 Our Obligations
+**9.2 Our Obligations**
 
 We will:
 - **Protect:** Use reasonable security measures
@@ -529,7 +529,7 @@ We will:
 - **Not Disclose:** Won't share without your permission
 - **Not Use:** Won't use for purposes other than providing services
 
-## 9.3 Exceptions
+**9.3 Exceptions**
 
 We may disclose if:
 - **Required by Law:** Court order, subpoena, legal obligation
@@ -538,7 +538,7 @@ We may disclose if:
 - **Independently Developed:** We created independently
 - **With Permission:** You authorize disclosure
 
-## 9.4 Duration
+**9.4 Duration**
 
 **During Service:**
 - Confidentiality applies throughout engagement
@@ -547,7 +547,7 @@ We may disclose if:
 - Continues for 3 years after termination (B2B)
 - Continues indefinitely for personal data (B2C)
 
-## 9.5 Non-Disclosure Agreements (NDAs)
+**9.5 Non-Disclosure Agreements (NDAs)**
 
 For sensitive projects:
 - We can sign mutual NDAs
@@ -557,7 +557,7 @@ For sensitive projects:
   },
   {
     title: "10. Warranties and Disclaimers",
-    content: `## 10.1 Our Warranties (B2B Services)
+    content: `**10.1 Our Warranties (B2B Services)**
 
 **We Warrant That:**
 - Services performed in professional, workmanlike manner
@@ -571,7 +571,7 @@ For sensitive projects:
 - We'll fix errors or non-conforming deliverables
 - Limited to correction of defects, not feature additions
 
-## 10.2 Service Disclaimers
+**10.2 Service Disclaimers**
 
 **SERVICES PROVIDED "AS IS":**
 
@@ -588,7 +588,7 @@ For sensitive projects:
 - Should be reviewed before use in production
 - No guarantee of specific outcomes
 
-## 10.3 No Warranties Beyond Those Stated
+**10.3 No Warranties Beyond Those Stated**
 
 **TO MAXIMUM EXTENT PERMITTED BY LAW, WE DISCLAIM:**
 
@@ -599,7 +599,7 @@ For sensitive projects:
 - **Accuracy/Reliability:** AI and software may have errors
 - **Third-Party Services:** No control over WhatsApp, payment processors, etc.
 
-## 10.4 Your Acknowledgment
+**10.4 Your Acknowledgment**
 
 **You Acknowledge:**
 - AI is emerging technology with limitations
@@ -608,7 +608,7 @@ For sensitive projects:
 - Results depend partly on your inputs and cooperation
 - You're responsible for evaluating outputs before use
 
-## 10.5 Warranty Claims
+**10.5 Warranty Claims**
 
 **To Claim Warranty:**
 1. Notify within warranty period
@@ -622,7 +622,7 @@ For sensitive projects:
   },
   {
     title: "11. Limitation of Liability",
-    content: `## 11.1 Types of Damages Excluded
+    content: `**11.1 Types of Damages Excluded**
 
 **TO MAXIMUM EXTENT PERMITTED BY LAW, WE ARE NOT LIABLE FOR:**
 
@@ -649,7 +649,7 @@ For sensitive projects:
 - Damages were foreseeable
 - Limited remedy fails of essential purpose
 
-## 11.2 Maximum Liability Cap
+**11.2 Maximum Liability Cap**
 
 **Our total liability to you shall not exceed:**
 
@@ -663,7 +663,7 @@ For sensitive projects:
 - Typically: ₹299-₹2,999 depending on plan
 - Minimum: ₹299 (two hundred ninety-nine rupees)
 
-## 11.3 Exceptions
+**11.3 Exceptions**
 
 **Liability cap does NOT apply to:**
 - Death or personal injury caused by our negligence
@@ -674,7 +674,7 @@ For sensitive projects:
 - Payment obligations
 - Matters that cannot be limited by law
 
-## 11.4 Allocation of Risk
+**11.4 Allocation of Risk**
 
 **These limitations reflect:**
 - Allocation of risk between parties
@@ -687,14 +687,14 @@ For sensitive projects:
 - You accept this allocation of risk
 - Pricing reflects these limitations
 
-## 11.5 Multiple Claims
+**11.5 Multiple Claims**
 
 **If multiple claims:**
 - All arising from same facts treated as one claim
 - Liability cap applies to aggregate of all claims
 - Not separate caps per claim
 
-## 11.6 Third-Party Actions
+**11.6 Third-Party Actions**
 
 **If a third party sues you related to our services:**
 - Our liability still subject to these limitations
@@ -702,7 +702,7 @@ For sensitive projects:
   },
   {
     title: "12. Indemnification",
-    content: `## 12.1 Your Indemnification of Us
+    content: `**12.1 Your Indemnification of Us**
 
 **You agree to indemnify, defend, and hold harmless Lightning AI Solutions, our officers, employees, contractors, and agents from any claims, damages, losses, liabilities, costs, and expenses (including legal fees) arising from:**
 
@@ -725,7 +725,7 @@ For sensitive projects:
 - Caused solely by our negligence or breach
 - Covered by our indemnification (see below)
 
-## 12.2 Our Indemnification of You (B2B Only)
+**12.2 Our Indemnification of You (B2B Only)**
 
 **We agree to indemnify you from claims that:**
 - Deliverables we created infringe third-party IP rights
@@ -750,7 +750,7 @@ For sensitive projects:
 - Use with non-approved third-party services
 - Continued use after we advised to stop
 
-## 12.3 Indemnification Process
+**12.3 Indemnification Process**
 
 **Notice:**
 - Provide prompt written notice of claim
@@ -770,7 +770,7 @@ For sensitive projects:
   },
   {
     title: "13. Term and Termination",
-    content: `## 13.1 Term
+    content: `**13.1 Term**
 
 **These Terms:**
 - Effective when you accept them
@@ -781,7 +781,7 @@ For sensitive projects:
 - **B2C Subscriptions:** Month-to-month or term purchased
 - **Retainers:** Ongoing until terminated
 
-## 13.2 Termination by You
+**13.2 Termination by You**
 
 **B2C Subscriptions:**
 - Cancel anytime through app/WhatsApp
@@ -794,7 +794,7 @@ For sensitive projects:
 - **Retainers:** 30 days written notice usually
 - May owe payment for work completed
 
-## 13.3 Termination by Us
+**13.3 Termination by Us**
 
 **We may terminate if:**
 - You violate these Terms
@@ -813,7 +813,7 @@ For sensitive projects:
 - Termination terms specified in SOW
 - Typically requires material breach and cure period
 
-## 13.4 Effect of Termination
+**13.4 Effect of Termination**
 
 **Upon Termination:**
 
@@ -832,7 +832,7 @@ For sensitive projects:
 - **B2C:** Account data deleted after 30 days (backup retention per privacy policy)
 - **B2B:** Deliverables delivered; we may retain copies per agreement
 
-## 13.5 Survival
+**13.5 Survival**
 
 **The following provisions survive termination:**
 - Payment obligations
@@ -845,7 +845,7 @@ For sensitive projects:
   },
   {
     title: "14. Dispute Resolution",
-    content: `## 14.1 Governing Law
+    content: `**14.1 Governing Law**
 
 **These Terms governed by:**
 - Laws of India
@@ -869,7 +869,7 @@ For sensitive projects:
 - Local consumer protection laws apply to consumer rights
 - You may bring consumer claims in your local jurisdiction if your local law permits
 
-## 14.2 Informal Resolution
+**14.2 Informal Resolution**
 
 **Before formal action, parties agree to:**
 1. **Notify:** Send written notice describing dispute
@@ -880,7 +880,7 @@ For sensitive projects:
 - Email: umang@lightningaisolutions.in
 - Subject: "Dispute Resolution - [Brief Description]"
 
-## 14.3 Mediation (Optional)
+**14.3 Mediation (Optional)**
 
 **If informal resolution fails:**
 - Either party may request mediation
@@ -889,7 +889,7 @@ For sensitive projects:
 - Costs split equally
 - Non-binding but encouraged
 
-## 14.4 Arbitration (For B2B Disputes Over ₹1 Lakh)
+**14.4 Arbitration (For B2B Disputes Over ₹1 Lakh)**
 
 **For business disputes exceeding ₹1,00,000:**
 
@@ -917,21 +917,21 @@ For sensitive projects:
 - This arbitration clause does not waive your statutory consumer rights
 - You may choose consumer forum or arbitration, not both
 
-## 14.5 Court Litigation (For Smaller Disputes)
+**14.5 Court Litigation (For Smaller Disputes)**
 
 **For disputes under ₹1 Lakh or B2C disputes:**
 - May proceed directly to court
 - Jurisdiction: Courts of Anand, Gujarat, India
 - Consumer disputes: Consumer court jurisdiction applies
 
-## 14.6 Injunctive Relief
+**14.6 Injunctive Relief**
 
 **Notwithstanding above:**
 - Either party may seek immediate injunctive relief in court
 - For IP infringement, breach of confidentiality, urgent matters
 - Without waiting for informal resolution or arbitration
 
-## 14.7 Class Action Waiver
+**14.7 Class Action Waiver**
 
 **You agree:**
 - Disputes resolved individually, not as class action
@@ -939,7 +939,7 @@ For sensitive projects:
 - Cannot join claims with other users
 - (May not apply in some jurisdictions - consumer law governs)
 
-## 14.8 Time Limit
+**14.8 Time Limit**
 
 **Claims must be filed within:**
 - **B2B:** 3 years from when dispute arose
@@ -948,7 +948,7 @@ For sensitive projects:
   },
   {
     title: "15. General Provisions",
-    content: `## 15.1 Entire Agreement
+    content: `**15.1 Entire Agreement**
 
 **These Terms, along with:**
 - Privacy Policy
@@ -964,7 +964,7 @@ For sensitive projects:
 - Prior versions of Terms
 - Conflicting provisions in other documents (except signed contracts)
 
-## 15.2 Amendments
+**15.2 Amendments**
 
 **We may modify these Terms:**
 - Post updated version on website
@@ -980,7 +980,7 @@ For sensitive projects:
 - B2B: Existing SOWs governed by terms at signing
 - B2C: New terms apply to continued use after notice period
 
-## 15.3 Severability
+**15.3 Severability**
 
 **If any provision invalid or unenforceable:**
 - Remaining provisions remain in full effect
@@ -991,7 +991,7 @@ For sensitive projects:
 - Limitation of liability reduced if cap illegal
 - Waiver removed but rest of terms remain
 
-## 15.4 Waiver
+**15.4 Waiver**
 
 **No waiver unless:**
 - In writing and signed
@@ -1002,7 +1002,7 @@ For sensitive projects:
 - Doesn't waive our right to enforce later
 - Doesn't establish precedent or pattern
 
-## 15.5 Assignment
+**15.5 Assignment**
 
 **You May Not:**
 - Assign or transfer these Terms without our written consent
@@ -1018,7 +1018,7 @@ For sensitive projects:
 - Assignee assumes all obligations
 - You'll be notified of material assignments
 
-## 15.6 Force Majeure
+**15.6 Force Majeure**
 
 **Neither party liable for failure to perform due to:**
 - Natural disasters (earthquake, flood, fire)
@@ -1037,7 +1037,7 @@ For sensitive projects:
 - Either party may terminate affected services
 - Refund for undelivered portion
 
-## 15.7 Notices
+**15.7 Notices**
 
 **How to Send Notices:**
 
@@ -1059,7 +1059,7 @@ For sensitive projects:
 - Must be in writing
 - Sent to addresses above
 
-## 15.8 Relationship of Parties
+**15.8 Relationship of Parties**
 
 **Independent Contractors:**
 - We're independent contractors
@@ -1067,7 +1067,7 @@ For sensitive projects:
 - Neither party has authority to bind the other
 - No third-party beneficiaries
 
-## 15.9 Export Control
+**15.9 Export Control**
 
 **If services involve software:**
 - Subject to Indian export control laws
@@ -1075,14 +1075,14 @@ For sensitive projects:
 - You're responsible for compliance
 - Won't use in sanctioned countries
 
-## 15.10 Language
+**15.10 Language**
 
 **Controlling Language:**
 - These Terms written in English
 - English version controls if translated
 - Disputes resolved based on English text
 
-## 15.11 Electronic Signatures
+**15.11 Electronic Signatures**
 
 **Acceptance:**
 - Electronic acceptance valid (clicking "I agree", using service)
@@ -1091,7 +1091,7 @@ For sensitive projects:
   },
   {
     title: "16. Service-Specific Terms",
-    content: `## 16.1 Astro AI Specific Terms
+    content: `**16.1 Astro AI Specific Terms**
 
 **Astrological Content:**
 - For entertainment and personal insight only
@@ -1130,7 +1130,7 @@ For sensitive projects:
 - Apply critical thinking to predictions
 - Enjoy as entertainment and self-reflection tool
 
-## 16.2 B2B AI Services Specific Terms
+**16.2 B2B AI Services Specific Terms**
 
 **AI Model Outputs:**
 - Generated by AI; may be unpredictable
@@ -1163,7 +1163,7 @@ For sensitive projects:
   },
   {
     title: "17. Changes to These Terms",
-    content: `## 17.1 How We Update
+    content: `**17.1 How We Update**
 
 **We may modify Terms for:**
 - New features or services
@@ -1172,7 +1172,7 @@ For sensitive projects:
 - Clarifications or corrections
 - Industry best practices
 
-## 17.2 Notification Process
+**17.2 Notification Process**
 
 **Material Changes:**
 - Email to registered email address
@@ -1183,7 +1183,7 @@ For sensitive projects:
 - Updated "Last Updated" date
 - Posted on website
 
-## 17.3 Your Options
+**17.3 Your Options**
 
 **If you disagree with changes:**
 - Stop using services before effective date
@@ -1192,7 +1192,7 @@ For sensitive projects:
 
 **Continued use after effective date = acceptance of new Terms**
 
-## 17.4 Version History
+**17.4 Version History**
 
 We maintain history of Terms:
 - Available upon request
@@ -1201,7 +1201,7 @@ We maintain history of Terms:
   },
   {
     title: "18. Contact Information",
-    content: `## 18.1 General Inquiries
+    content: `**18.1 General Inquiries**
 
 **Lightning AI Solutions**
 
@@ -1216,7 +1216,7 @@ We maintain history of Terms:
 Anand Vidhyanagar Road
 Anand, Gujarat, India - 388001
 
-## 18.2 Specific Departments
+**18.2 Specific Departments**
 
 **For Technical Support:**
 - Astro AI: WhatsApp +91 9426154668
@@ -1238,7 +1238,7 @@ Anand, Gujarat, India - 388001
 - Email: umang@lightningaisolutions.in
 - Subject: "Dispute Resolution"
 
-## 18.3 Business Hours
+**18.3 Business Hours**
 
 **Support Hours:**
 - Monday-Saturday: 10:00 AM - 7:00 PM IST
@@ -1250,7 +1250,7 @@ Anand, Gujarat, India - 388001
 - General inquiries: Within 3-5 business days
 - Urgent matters: Tag as "URGENT" in subject
 
-## 18.4 Social Media
+**18.4 Social Media**
 
 **Official Channels:** [To be added when available]
 - LinkedIn: [Company Page]
@@ -1261,7 +1261,7 @@ Anand, Gujarat, India - 388001
 
 ---
 
-## Acceptance
+**Acceptance**
 
 By using Lightning AI Solutions' services (including but not limited to Astro AI, website, and any professional services), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
 

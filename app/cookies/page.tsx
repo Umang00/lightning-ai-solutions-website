@@ -26,7 +26,7 @@ const sections = [
     title: "2. How We Use Cookies",
     content: `Lightning AI Solutions uses cookies and similar technologies for several purposes:
 
-## 2.1 Essential Cookies (Always Active)
+**2.1 Essential Cookies (Always Active)**
 
 **Required for website to function:**
 - **Security:** Protect against unauthorized access
@@ -39,7 +39,7 @@ const sections = [
 - They're necessary for website operation
 - Disabling would break core functionality
 
-## 2.2 Analytics Cookies (Optional)
+**2.2 Analytics Cookies (Optional)**
 
 **Help us understand usage:**
 - **Google Analytics:** Track pages visited, time spent, user flow
@@ -53,7 +53,7 @@ const sections = [
 - How to improve navigation
 - Technical performance issues
 
-## 2.3 Functional Cookies (Optional)
+**2.3 Functional Cookies (Optional)**
 
 **Remember your preferences:**
 - Language selection
@@ -66,7 +66,7 @@ const sections = [
 - Don't have to re-enter preferences each visit
 - More personalized experience
 
-## 2.4 Marketing Cookies (Optional)
+**2.4 Marketing Cookies (Optional)**
 
 **Track activity for relevant ads:**
 - **Google Ads:** Show relevant ads on Google
@@ -85,7 +85,7 @@ const sections = [
   },
   {
     title: "3. Types of Cookies We Use",
-    content: `## 3.1 By Duration
+    content: `**3.1 By Duration**
 
 **Session Cookies:**
 - **Lifespan:** Deleted when you close browser
@@ -98,7 +98,7 @@ const sections = [
 - **Purpose:** Remember you on return visits
 - **Examples:** Preferences, analytics, marketing
 
-## 3.2 By Source
+**3.2 By Source**
 
 **First-Party Cookies:**
 - **Set By:** lightningaisolutions.in directly
@@ -116,7 +116,7 @@ const sections = [
   },
   {
     title: "4. Specific Cookies We Use",
-    content: `## 4.1 Essential Cookies
+    content: `**4.1 Essential Cookies**
 
 | Cookie Name | Purpose | Duration | Type |
 |-------------|---------|----------|------|
@@ -125,7 +125,7 @@ const sections = [
 | \`cookie_consent\` | Stores your cookie preferences | 1 year | First-party |
 | \`auth_token\` | Keeps you logged in (B2B portal) | 7 days | First-party |
 
-## 4.2 Analytics Cookies
+**4.2 Analytics Cookies**
 
 | Cookie Name | Purpose | Duration | Type |
 |-------------|---------|----------|------|
@@ -134,7 +134,7 @@ const sections = [
 | \`_gat\` | Google Analytics - Throttles requests | 1 minute | Third-party |
 | \`__vercel_analytics_id\` | Vercel Analytics - Anonymous ID | 2 years | Third-party |
 
-## 4.3 Functional Cookies
+**4.3 Functional Cookies**
 
 | Cookie Name | Purpose | Duration | Type |
 |-------------|---------|----------|------|
@@ -142,7 +142,7 @@ const sections = [
 | \`theme\` | Light/dark mode preference | 1 year | First-party |
 | \`timezone\` | Your timezone | 1 year | First-party |
 
-## 4.4 Marketing Cookies (If You Consent)
+**4.4 Marketing Cookies (If You Consent)**
 
 | Cookie Name | Purpose | Duration | Type |
 |-------------|---------|----------|------|
@@ -154,7 +154,7 @@ const sections = [
   },
   {
     title: "5. Your Cookie Choices and Controls",
-    content: `## 5.1 Cookie Consent Banner
+    content: `**5.1 Cookie Consent Banner**
 
 **On first visit:**
 - You'll see cookie consent banner
@@ -164,7 +164,7 @@ const sections = [
   - **Reject Non-Essential:** Only essential cookies
   - **Customize:** Choose specific categories
 
-## 5.2 Changing Your Preferences
+**5.2 Changing Your Preferences**
 
 **Anytime after initial choice:**
 - Look for cookie icon in bottom-right corner
@@ -172,7 +172,7 @@ const sections = [
 - Update your preferences
 - Changes take effect immediately
 
-## 5.3 Browser Controls
+**5.3 Browser Controls**
 
 **All major browsers let you control cookies:**
 
@@ -199,7 +199,7 @@ const sections = [
 2. Choose tracking prevention level
 3. Manage cookies and site permissions
 
-## 5.4 Important Notes
+**5.4 Important Notes**
 
 **If You Block All Cookies:**
 - Website may not function properly
@@ -216,7 +216,7 @@ const sections = [
     title: "6. Similar Technologies",
     content: `Besides cookies, we may use similar technologies:
 
-## 6.1 Local Storage
+**6.1 Local Storage**
 
 **What It Is:**
 - Stores data in your browser
@@ -232,7 +232,7 @@ const sections = [
 - Clear through browser dev tools
 - Cleared when you clear browsing data
 
-## 6.2 Session Storage
+**6.2 Session Storage**
 
 **What It Is:**
 - Similar to local storage
@@ -243,7 +243,7 @@ const sections = [
 - Form progress
 - Navigation state
 
-## 6.3 Web Beacons/Pixels
+**6.3 Web Beacons/Pixels**
 
 **What They Are:**
 - Tiny invisible images embedded in emails/pages
@@ -259,7 +259,7 @@ const sections = [
 - Thank you pages
 - Advertising pixels (Google, Facebook, LinkedIn)
 
-## 6.4 Device Fingerprinting
+**6.4 Device Fingerprinting**
 
 **What It Is:**
 - Identifying devices by combining characteristics
@@ -276,7 +276,7 @@ const sections = [
   },
   {
     title: "7. Third-Party Services and Cookies",
-    content: `## 7.1 Services That Set Cookies
+    content: `**7.1 Services That Set Cookies**
 
 When you use our website, these third-party services may set cookies:
 
@@ -303,7 +303,7 @@ When you use our website, these third-party services may set cookies:
 - **Only Active:** During payment process
 - **Data:** Transaction data only, not browsing history
 
-## 7.2 Third-Party Integrations
+**7.2 Third-Party Integrations**
 
 **WhatsApp Business API (Astro AI):**
 - Doesn't use web cookies
@@ -315,14 +315,14 @@ When you use our website, these third-party services may set cookies:
 - Measures ad performance
 - Privacy: https://www.linkedin.com/legal/privacy-policy
 
-## 7.3 Social Media Plugins
+**7.3 Social Media Plugins**
 
 If we add social sharing buttons:
 - May set cookies when you interact with them
 - Subject to their privacy policies
 - Can disable in cookie settings
 
-## 7.4 We Don't Control Third-Party Cookies
+**7.4 We Don't Control Third-Party Cookies**
 
 **Important:**
 - We don't control how third parties use cookies
@@ -332,7 +332,7 @@ If we add social sharing buttons:
   },
   {
     title: "8. Cookie Retention and Deletion",
-    content: `## 8.1 How Long Cookies Last
+    content: `**8.1 How Long Cookies Last**
 
 **Session Cookies:**
 - Deleted when you close browser
@@ -345,7 +345,7 @@ If we add social sharing buttons:
 - **Marketing:** 90 days typically
 - Automatically expire after duration
 
-## 8.2 Deleting Cookies Manually
+**8.2 Deleting Cookies Manually**
 
 **In Your Browser:**
 
@@ -368,7 +368,7 @@ If we add social sharing buttons:
 - "Clear Browsing Data" removes all cookies
 - Can set to auto-clear on browser close
 
-## 8.3 Effect of Deleting Cookies
+**8.3 Effect of Deleting Cookies**
 
 **What Happens:**
 - Logged out of account
@@ -383,7 +383,7 @@ If we add social sharing buttons:
   },
   {
     title: "9. Updates to This Cookie Policy",
-    content: `## 9.1 When We Update
+    content: `**9.1 When We Update**
 
 **Reasons for changes:**
 - New cookies added
@@ -391,7 +391,7 @@ If we add social sharing buttons:
 - Legal requirements
 - Improve clarity
 
-## 9.2 How You'll Know
+**9.2 How You'll Know**
 
 **For Significant Changes:**
 - Update "Last Updated" date
@@ -402,14 +402,14 @@ If we add social sharing buttons:
 - Update document
 - No active notification
 
-## 9.3 Your Responsibility
+**9.3 Your Responsibility**
 
 **Good Practice:**
 - Review this policy periodically
 - Check "Last Updated" date
 - Update cookie preferences if needed
 
-## 9.4 Version History
+**9.4 Version History**
 
 - **Current Version:** 2.0
 - **Last Updated:** October 30, 2025
@@ -417,7 +417,7 @@ If we add social sharing buttons:
   },
   {
     title: "10. Contact Us About Cookies",
-    content: `## 10.1 Questions or Concerns
+    content: `**10.1 Questions or Concerns**
 
 If you have questions about our cookie practices:
 
@@ -429,14 +429,14 @@ If you have questions about our cookie practices:
 - Any cookies you're concerned about
 - Browser and device info (if technical issue)
 
-## 10.2 Managing Your Preferences
+**10.2 Managing Your Preferences**
 
 **To Update Cookie Settings:**
 - Click cookie icon on our website
 - Use "Cookie Settings" link in footer
 - Email us if you need assistance
 
-## 10.3 Privacy Concerns
+**10.3 Privacy Concerns**
 
 For broader privacy questions, see our [Privacy Policy](#) or contact:
 
@@ -444,7 +444,7 @@ For broader privacy questions, see our [Privacy Policy](#) or contact:
 - Email: umang@lightningaisolutions.in
 - Subject: "Privacy Inquiry"
 
-## 10.4 Technical Support
+**10.4 Technical Support**
 
 **If cookies causing technical issues:**
 - Describe the problem
@@ -452,7 +452,7 @@ For broader privacy questions, see our [Privacy Policy](#) or contact:
 - Screenshots if applicable
 - We'll help troubleshoot
 
-## 10.5 Company Information
+**10.5 Company Information**
 
 **Lightning AI Solutions**
 

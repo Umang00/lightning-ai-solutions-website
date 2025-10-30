@@ -24,7 +24,7 @@ By engaging our services or purchasing our products, you agree to this policy.`,
   },
   {
     title: "2. B2B Services - Client Development Work",
-    content: `## 2.1 Service Types
+    content: `**2.1 Service Types**
 
 Our refund policy varies based on engagement type:
 
@@ -32,7 +32,7 @@ Our refund policy varies based on engagement type:
 **Time & Materials:** Hourly or daily rate engagements
 **Retainer Agreements:** Ongoing monthly engagements
 
-## 2.2 Deposits and Initial Payments
+**2.2 Deposits and Initial Payments**
 
 **Project Deposit:** Most projects require a 30-50% deposit before work begins.
 
@@ -96,14 +96,14 @@ Project cost: ₹100,000 (50% deposit, 50% on completion)
   },
   {
     title: "6. B2C Products - Subscription Services",
-    content: `## 6.1 Astro AI WhatsApp Subscription
+    content: `**6.1 Astro AI WhatsApp Subscription**
 
 **Available Plans:**
 - Monthly: ₹299/month
 - Quarterly: ₹799/3 months (11% savings)
 - Yearly: ₹2,999/year (17% savings)
 
-## 6.2 Money-Back Guarantee
+**6.2 Money-Back Guarantee**
 
 **7-Day Full Refund:**
 - Request full refund within 7 days of first payment
@@ -117,7 +117,7 @@ Project cost: ₹100,000 (50% deposit, 50% on completion)
 3. In-app: "Request Refund" option in settings
 4. Provide: Order ID, reason (optional)
 
-## 6.3 After 7-Day Period
+**6.3 After 7-Day Period**
 
 **No Refunds:**
 - After 7 days, subscriptions are non-refundable
@@ -129,7 +129,7 @@ Project cost: ₹100,000 (50% deposit, 50% on completion)
 - Takes effect at end of current billing period
 - No partial month refunds
 
-## 6.4 Multi-Month Subscriptions
+**6.4 Multi-Month Subscriptions**
 
 **Quarterly (3 months):**
 - 7-day money-back guarantee applies
@@ -148,7 +148,7 @@ Refund = (Unused months / Total months) × Subscription price - Processing fee (
   },
   {
     title: "7. Refund Eligibility - All Services",
-    content: `## You ARE Eligible for Refund If:
+    content: `**You ARE Eligible for Refund If:**
 
 **For B2B Services:**
 - We fail to deliver agreed services without valid reason
@@ -163,7 +163,7 @@ Refund = (Unused months / Total months) × Subscription price - Processing fee (
 - Service permanently discontinued (pro-rated)
 - Charged incorrectly (full refund of incorrect charge)
 
-## You Are NOT Eligible for Refund If:
+**You Are NOT Eligible for Refund If:**
 
 **For B2B Services:**
 - You change requirements after work begins
@@ -200,7 +200,7 @@ Refund = (Unused months / Total months) × Subscription price - Processing fee (
   },
   {
     title: "9. Requesting a Refund",
-    content: `## Process for All Refund Requests:
+    content: `**Process for All Refund Requests:**
 
 **Step 1: Contact Us**
 - Email: umang@lightningaisolutions.in
@@ -253,7 +253,7 @@ If service partially delivered:
   },
   {
     title: "11. Dispute Resolution",
-    content: `## If You Disagree with Refund Decision:
+    content: `**If You Disagree with Refund Decision:**
 
 **Step 1: Contact Us**
 - Email: umang@lightningaisolutions.in
@@ -282,7 +282,7 @@ If service partially delivered:
   },
   {
     title: "12. Chargebacks and Payment Disputes",
-    content: `## Our Position on Chargebacks:
+    content: `**Our Position on Chargebacks:**
 
 **Please Contact Us First:**
 - 95% of issues are resolved through direct communication
@@ -353,7 +353,7 @@ If service partially delivered:
   },
   {
     title: "14. Service Credits (Alternative to Refund)",
-    content: `## Instead of Refund, We May Offer:
+    content: `**Instead of Refund, We May Offer:**
 
 **For B2B Clients:**
 - Credit toward future services
@@ -396,7 +396,7 @@ If service partially delivered:
   },
   {
     title: "16. Contact Information",
-    content: `## For Refund Requests or Questions:
+    content: `**For Refund Requests or Questions:**
 
 **Lightning AI Solutions**
 

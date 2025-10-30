@@ -24,7 +24,7 @@ This policy applies to all users, whether you're a business client or individual
   },
   {
     title: "2. Information We Collect",
-    content: `## 2.1 Information You Provide Directly
+    content: `**2.1 Information You Provide Directly**
 
 **For B2B Clients:**
 - Business name, contact person, job title
@@ -44,7 +44,7 @@ This policy applies to all users, whether you're a business client or individual
 - Subscription and payment information
 - Feedback and ratings
 
-## 2.2 Information Collected Automatically
+**2.2 Information Collected Automatically**
 
 **Website Usage Data:**
 - Device information (type, operating system, browser)
@@ -65,7 +65,7 @@ This policy applies to all users, whether you're a business client or individual
 - In-app behavior and features used
 - Push notification preferences
 
-## 2.3 Information from Third Parties
+**2.3 Information from Third Parties**
 
 **Payment Processors:**
 - Transaction confirmations
@@ -84,7 +84,7 @@ This policy applies to all users, whether you're a business client or individual
   },
   {
     title: "3. How We Use Your Information",
-    content: `## 3.1 For B2B Services
+    content: `**3.1 For B2B Services**
 
 We use your information to:
 - **Deliver Services:** Execute projects, provide deliverables, manage contracts
@@ -94,7 +94,7 @@ We use your information to:
 - **Legal Compliance:** Maintain records, comply with tax laws, contract enforcement
 - **Marketing:** Send relevant service updates (with opt-out option)
 
-## 3.2 For B2C Products (Astro AI)
+**3.2 For B2C Products (Astro AI)**
 
 We use your information to:
 - **Provide Service:** Generate birth charts, calculate compatibility, answer questions
@@ -106,7 +106,7 @@ We use your information to:
 - **Analytics:** Understand user behavior, popular features, usage patterns
 - **Safety:** Detect abuse, prevent fraud, ensure Terms compliance
 
-## 3.3 General Purposes (All Users)
+**3.3 General Purposes (All Users)**
 
 - **Security:** Protect against unauthorized access, cyberattacks
 - **Legal Obligations:** Comply with laws, respond to legal requests
@@ -143,11 +143,11 @@ You can withdraw consent anytime without affecting lawfulness of processing befo
   },
   {
     title: "5. Information Sharing and Disclosure",
-    content: `## 5.1 We DO NOT Sell Your Data
+    content: `**5.1 We DO NOT Sell Your Data**
 
 We NEVER sell, rent, or trade your personal information to third parties for their marketing purposes.
 
-## 5.2 We Share Information With:
+**5.2 We Share Information With:**
 
 **Service Providers:**
 - **Hosting:** Vercel, AWS, Google Cloud (server infrastructure)
@@ -173,7 +173,7 @@ We NEVER sell, rent, or trade your personal information to third parties for the
 - In event of merger, acquisition, or sale of assets
 - New owners would be bound by this Privacy Policy
 
-## 5.3 Data Transfer Outside India
+**5.3 Data Transfer Outside India**
 
 Some service providers are located outside India (e.g., US, EU):
 - We use Standard Contractual Clauses (SCCs) for EU transfers
@@ -185,7 +185,7 @@ Your birth data and questions may be processed by AI services (OpenAI/Anthropic)
   },
   {
     title: "6. Data Security",
-    content: `## 6.1 Security Measures
+    content: `**6.1 Security Measures**
 
 We implement industry-standard security measures:
 
@@ -210,7 +210,7 @@ We implement industry-standard security measures:
 - Secure authentication (encrypted passwords, session management)
 - Regular security updates and patches
 
-## 6.2 Limitations
+**6.2 Limitations**
 
 **No System is 100% Secure:**
 While we strive for maximum security, no internet transmission or electronic storage is completely secure. We cannot guarantee absolute security.
@@ -221,7 +221,7 @@ While we strive for maximum security, no internet transmission or electronic sto
 - Use secure networks
 - Report suspicious activity immediately
 
-## 6.3 Data Breach Notification
+**6.3 Data Breach Notification**
 
 If a breach occurs affecting your data:
 - We'll notify you within 72 hours (as required by law)
@@ -231,7 +231,7 @@ If a breach occurs affecting your data:
   },
   {
     title: "7. Data Retention",
-    content: `## 7.1 How Long We Keep Your Data
+    content: `**7.1 How Long We Keep Your Data**
 
 **B2B Client Data:**
 - Active projects: Duration of project + 7 years (legal/tax requirements)
@@ -256,13 +256,13 @@ If a breach occurs affecting your data:
 **Legal/Disputes:**
 - If legal claim or dispute: Retained until resolution + 1 year
 
-## 7.2 Requesting Early Deletion
+**7.2 Requesting Early Deletion**
 
 You can request deletion before standard retention periods (see "Your Rights" section).`,
   },
   {
     title: "8. Your Privacy Rights",
-    content: `## 8.1 Rights for All Users
+    content: `**8.1 Rights for All Users**
 
 **Access:** Request copy of personal information we hold about you
 
@@ -280,7 +280,7 @@ You can request deletion before standard retention periods (see "Your Rights" se
 **Withdraw Consent:** Withdraw consent for processing based on consent
 - Doesn't affect lawfulness of processing before withdrawal
 
-## 8.2 Additional Rights (India/GDPR)
+**8.2 Additional Rights (India/GDPR)**
 
 **For Indian Users (DPDP Act):**
 - Right to nominate (designate someone to exercise rights after death)
@@ -290,7 +290,7 @@ You can request deletion before standard retention periods (see "Your Rights" se
 - Right to lodge complaint with supervisory authority
 - Right to human review of automated decisions
 
-## 8.3 How to Exercise Your Rights
+**8.3 How to Exercise Your Rights**
 
 **Email:** umang@lightningaisolutions.in
 **Subject:** "Privacy Rights Request - [Your Right]"
@@ -305,7 +305,7 @@ You can request deletion before standard retention periods (see "Your Rights" se
 - May extend by 60 days for complex requests (we'll notify you)
 - May ask for ID verification to prevent fraud
 
-## 8.4 Limitations on Rights
+**8.4 Limitations on Rights**
 
 We may deny requests if:
 - Required by law to retain data
@@ -335,7 +335,7 @@ WhatsApp Business API doesn't use cookies, but WhatsApp has its own privacy poli
   },
   {
     title: "10. Children's Privacy",
-    content: `## 10.1 Age Restrictions
+    content: `**10.1 Age Restrictions**
 
 **B2B Services:** Intended for businesses; not marketed to children
 
@@ -343,14 +343,14 @@ WhatsApp Business API doesn't use cookies, but WhatsApp has its own privacy poli
 - Intended for users 18 years and older
 - We don't knowingly collect data from children under 18
 
-## 10.2 If We Discover Child Data
+**10.2 If We Discover Child Data**
 
 If we learn we've collected data from a child under 18:
 - We'll delete it immediately
 - We'll terminate their account
 - We'll notify parent/guardian if possible
 
-## 10.3 Parent/Guardian Rights
+**10.3 Parent/Guardian Rights**
 
 If you believe your child provided information to us:
 - Contact us immediately: umang@lightningaisolutions.in
@@ -358,7 +358,7 @@ If you believe your child provided information to us:
   },
   {
     title: "11. Third-Party Links and Services",
-    content: `## 11.1 External Links
+    content: `**11.1 External Links**
 
 Our website and communications may contain links to third-party websites:
 - We're NOT responsible for their privacy practices
@@ -370,7 +370,7 @@ Our website and communications may contain links to third-party websites:
 - Partner websites
 - Resource links
 
-## 11.2 Third-Party Services We Use
+**11.2 Third-Party Services We Use**
 
 **WhatsApp Business Platform:**
 - Astro AI runs on WhatsApp's infrastructure
@@ -391,14 +391,14 @@ Our website and communications may contain links to third-party websites:
   },
   {
     title: "12. International Data Transfers",
-    content: `## 12.1 Cross-Border Transfers
+    content: `**12.1 Cross-Border Transfers**
 
 Lightning AI Solutions is based in India. Your information may be transferred to and processed in:
 - India (primary data storage)
 - United States (AI processing, analytics)
 - European Union (some service providers)
 
-## 12.2 Safeguards
+**12.2 Safeguards**
 
 For transfers outside India, we ensure:
 - **Standard Contractual Clauses (SCCs):** For EU data transfers
@@ -406,13 +406,13 @@ For transfers outside India, we ensure:
 - **Binding Corporate Rules:** For internal transfers within organizations
 - **Consent:** Your explicit consent where appropriate
 
-## 12.3 Your Rights
+**12.3 Your Rights**
 
 Even if data processed abroad, you retain all privacy rights outlined in this policy.`,
   },
   {
     title: "13. Automated Decision-Making",
-    content: `## 13.1 AI and Algorithms
+    content: `**13.1 AI and Algorithms**
 
 **Astro AI:**
 - Birth chart calculations are automated (astrological algorithms)
@@ -424,7 +424,7 @@ Even if data processed abroad, you retain all privacy rights outlined in this po
 - You maintain full control over life decisions
 - No financial, legal, or employment impact
 
-## 13.2 Your Rights
+**13.2 Your Rights**
 
 You can:
 - Request human review of AI outputs
@@ -432,7 +432,7 @@ You can:
 - Opt out of personalization
 - Delete data used for profiling
 
-## 13.3 B2B Services
+**13.3 B2B Services**
 
 For business clients:
 - Project decisions made by humans
@@ -469,7 +469,7 @@ We'll verify your identity and respond within 45 days.`,
   },
   {
     title: "15. Changes to This Privacy Policy",
-    content: `## 15.1 Policy Updates
+    content: `**15.1 Policy Updates**
 
 We may update this policy to reflect:
 - Changes in our practices
@@ -477,7 +477,7 @@ We may update this policy to reflect:
 - Legal or regulatory requirements
 - Feedback from users
 
-## 15.2 Notification of Changes
+**15.2 Notification of Changes**
 
 **Material Changes:**
 - Email notification to registered users
@@ -488,20 +488,20 @@ We may update this policy to reflect:
 - Updated "Last Updated" date
 - Published on website
 
-## 15.3 Your Options
+**15.3 Your Options**
 
 If you don't agree with changes:
 - **B2B Clients:** Existing contracts governed by policy at start
 - **B2C Users:** Can cancel subscription before changes take effect
 - **Website Visitors:** Stop using our website
 
-## 15.4 Continued Use = Acceptance
+**15.4 Continued Use = Acceptance**
 
 Continuing to use services after changes means you accept updated policy.`,
   },
   {
     title: "16. Contact Us & Data Protection Officer",
-    content: `## 16.1 Privacy Questions or Concerns
+    content: `**16.1 Privacy Questions or Concerns**
 
 **Lightning AI Solutions**
 
@@ -515,20 +515,20 @@ Continuing to use services after changes means you accept updated policy.`,
 Anand Vidhyanagar Road
 Anand, Gujarat, India - 388001
 
-## 16.2 Data Protection Officer (DPO)
+**16.2 Data Protection Officer (DPO)**
 
 For data protection inquiries:
 **Name:** Umang Patel (Founder/DPO)
 **Email:** umang@lightningaisolutions.in
 
-## 16.3 Response Time
+**16.3 Response Time**
 
 We'll respond to privacy inquiries within:
 - General questions: 5 business days
 - Rights requests: 30 days (may extend to 90 days for complex requests)
 - Urgent security matters: 24 hours
 
-## 16.4 Supervisory Authority (For EU/EEA Users)
+**16.4 Supervisory Authority (For EU/EEA Users)**
 
 If you're unsatisfied with our response, you can lodge a complaint with your local data protection authority.
 
