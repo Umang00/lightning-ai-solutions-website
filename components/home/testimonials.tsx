@@ -8,7 +8,7 @@ const testimonials = [
     name: "Priya Sharma",
     role: "CEO, HealthTech Startup",
     content:
-      "Lightning AI Solutions transformed our customer support with their voice AI agent. We're now handling 100+ daily consultations automatically, saving $1,000+ monthly while improving response times by 70%.",
+      "Lightning AI Solutions transformed our customer support with their voice AI agent. We're now handling 100+ daily consultations automatically, saving $10,000+ monthly while improving response times by 70%.",
     rating: 5,
     company: "HealthFirst",
   },

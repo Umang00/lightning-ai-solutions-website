@@ -221,7 +221,7 @@ export const ALL_PROJECTS: Project[] = [
     icon: BarChart3,
     title: "Retool Marketing Analytics Dashboard",
     shortTitle: "Marketing Dashboard",
-    description: "Unified analytics dashboard consolidating 5+ data sources with AI-powered sentiment analysis, saving $1,000+ monthly and 15+ hours weekly",
+    description: "Unified analytics dashboard consolidating 5+ data sources with AI-powered sentiment analysis, saving $10,000+ monthly and 15+ hours weekly",
     client: "Hunch (Marketing Team)",
     industry: "Marketing & Analytics",
     timeline: "4 weeks",
@@ -231,7 +231,7 @@ export const ALL_PROJECTS: Project[] = [
     categories: ["Analytics", "Automation"],
     gradient: "from-yellow-600 to-orange-600",
     metrics: [
-      { metric: "$1K+", label: "Monthly Savings" },
+      { metric: "$10K+", label: "Monthly Savings" },
       { metric: "15h", label: "Weekly Time Saved" },
       { metric: "25%", label: "Content Improvement" },
       { metric: "534%", label: "Year 1 ROI" },
@@ -249,7 +249,7 @@ export const ALL_PROJECTS: Project[] = [
       "Export & Reporting - One-click weekly/monthly report generation",
     ],
     outcomes: [
-      "Reduced SaaS costs by $1,000+/month (eliminated Hootsuite, Sprout Social, Mention)",
+      "Reduced SaaS costs by $10,000+/month (eliminated Hootsuite, Sprout Social, Mention)",
       "Saved 15+ hours weekly in manual data aggregation work",
       "Reduced report generation time from 2 days to 15 minutes",
       "Improved content performance by 25% using AI insights",
