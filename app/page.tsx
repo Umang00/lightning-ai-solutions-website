@@ -1,6 +1,6 @@
 import { Hero } from "@/components/home/hero";
 import { ImpactStats } from "@/components/home/impact-stats";
-import { ProjectsFocus } from "@/components/home/projects-focus";
+import { ProjectsBento } from "@/components/home/projects-bento";
 import { ServicesOverview } from "@/components/home/services-overview";
 import { FounderHighlight } from "@/components/home/founder-highlight";
 import { TechStack } from "@/components/home/tech-stack";
@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <Hero />
       <ImpactStats />
-      <ProjectsFocus />
+      <ProjectsBento />
       <ServicesOverview />
       <FounderHighlight />
       <TechStack />
