@@ -117,7 +117,7 @@ You are NOT eligible for a refund if:
 **Lightning AI Solutions**
 Email: hello@lightningai.solutions
 Phone: +91 9426154668
-Location: Delhi, India`,
+Address: 6/A Chinar Gulnar, Anand Vidhyanagar Road, Anand, Gujarat, India - 388001`,
   },
 ];
 

@@ -87,7 +87,7 @@ Our total liability shall not exceed the amount paid by you for the services in 
 
 **Negotiation:** Parties will attempt to resolve disputes through good faith negotiation.
 
-**Arbitration:** If negotiation fails, disputes will be resolved through binding arbitration in Delhi, India.`,
+**Arbitration:** If negotiation fails, disputes will be resolved through binding arbitration in Anand, Gujarat, India.`,
   },
   {
     title: "13. Changes to Terms",
@@ -100,7 +100,7 @@ Our total liability shall not exceed the amount paid by you for the services in 
 **Lightning AI Solutions**
 Email: hello@lightningai.solutions
 Phone: +91 9426154668
-Location: Delhi, India`,
+Address: 6/A Chinar Gulnar, Anand Vidhyanagar Road, Anand, Gujarat, India - 388001`,
   },
 ];
 
