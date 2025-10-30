@@ -5,7 +5,7 @@ export const COMPANY = {
   location: "Anand, Gujarat, India",
   address: "6/A Chinar Gulnar, Anand Vidhyanagar Road, Anand, Gujarat, India",
   pincode: "388001",
-  email: "hello@lightningai.solutions",
+  email: "umang@lightningaisolutions.in",
   phone: "+91 9426154668",
   founded: "2024",
 } as const;

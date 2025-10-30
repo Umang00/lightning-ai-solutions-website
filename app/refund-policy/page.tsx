@@ -79,7 +79,7 @@ You are NOT eligible for a refund if:
     title: "8. Requesting a Refund",
     content: `To request a refund:
 
-1. Send a written request to hello@lightningai.solutions
+1. Send a written request to umang@lightningaisolutions.in
 2. Include your project details and reason for refund
 3. Provide any supporting documentation
 4. We will respond within 5 business days
@@ -89,7 +89,7 @@ You are NOT eligible for a refund if:
     title: "9. Dispute Resolution",
     content: `If you disagree with a refund decision:
 
-**Step 1:** Contact us to discuss the issue (hello@lightningai.solutions)
+**Step 1:** Contact us to discuss the issue (umang@lightningaisolutions.in)
 
 **Step 2:** We'll review your case and provide a detailed response
 
@@ -115,7 +115,7 @@ You are NOT eligible for a refund if:
     content: `For questions about refunds or to request a refund, contact us:
 
 **Lightning AI Solutions**
-Email: hello@lightningai.solutions
+Email: umang@lightningaisolutions.in
 Phone: +91 9426154668
 Address: 6/A Chinar Gulnar, Anand Vidhyanagar Road, Anand, Gujarat, India - 388001`,
   },

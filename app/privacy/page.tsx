@@ -66,7 +66,7 @@ const sections = [
 - **Portability:** Request transfer of your information
 - **Withdrawal:** Withdraw consent at any time
 
-To exercise these rights, please contact us at hello@lightningai.solutions.`,
+To exercise these rights, please contact us at umang@lightningaisolutions.in.`,
   },
   {
     title: "7. Cookies and Tracking",
@@ -93,7 +93,7 @@ To exercise these rights, please contact us at hello@lightningai.solutions.`,
     content: `If you have any questions about this privacy policy, please contact us:
 
 **Lightning AI Solutions**
-Email: hello@lightningai.solutions
+Email: umang@lightningaisolutions.in
 Phone: +91 9426154668
 Address: 6/A Chinar Gulnar, Anand Vidhyanagar Road, Anand, Gujarat, India - 388001`,
   },

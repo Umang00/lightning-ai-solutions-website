@@ -98,7 +98,7 @@ Our total liability shall not exceed the amount paid by you for the services in 
     content: `For questions about these Terms, contact us:
 
 **Lightning AI Solutions**
-Email: hello@lightningai.solutions
+Email: umang@lightningaisolutions.in
 Phone: +91 9426154668
 Address: 6/A Chinar Gulnar, Anand Vidhyanagar Road, Anand, Gujarat, India - 388001`,
   },

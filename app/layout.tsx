@@ -90,14 +90,17 @@ export default function RootLayout({
                 "AI product development, LLM fine-tuning, voice AI agents, intelligent automation, and AI analytics services.",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Delhi",
+                streetAddress: "6/A Chinar Gulnar, Anand Vidhyanagar Road",
+                addressLocality: "Anand",
+                addressRegion: "Gujarat",
+                postalCode: "388001",
                 addressCountry: "IN",
               },
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+91-9426154668",
                 contactType: "Customer Service",
-                email: "hello@lightningai.solutions",
+                email: "umang@lightningaisolutions.in",
               },
               sameAs: [
                 "https://linkedin.com/company/lightningai",
@@ -105,8 +108,8 @@ export default function RootLayout({
               ],
               founder: {
                 "@type": "Person",
-                name: "Aarav Mehta",
-                jobTitle: "Founder & AI Engineer",
+                name: "Umang Thakkar",
+                jobTitle: "AI Product Manager & Builder",
               },
               areaServed: "Worldwide",
               serviceType: [

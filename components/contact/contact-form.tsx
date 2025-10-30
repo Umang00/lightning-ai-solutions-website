@@ -74,7 +74,7 @@ export function ContactForm() {
     } catch (error) {
       toast({
         title: "Something went wrong",
-        description: "Please try again or email us directly at hello@lightningai.solutions",
+        description: "Please try again or email us directly at umang@lightningaisolutions.in",
         variant: "destructive",
       });
     } finally {

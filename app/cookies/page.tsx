@@ -82,7 +82,7 @@ These services have their own privacy policies governing cookie use.`,
     content: `If you have questions about our use of cookies, please contact us:
 
 **Lightning AI Solutions**
-Email: hello@lightningai.solutions
+Email: umang@lightningaisolutions.in
 Phone: +91 9426154668
 Address: 6/A Chinar Gulnar, Anand Vidhyanagar Road, Anand, Gujarat, India - 388001`,
   },

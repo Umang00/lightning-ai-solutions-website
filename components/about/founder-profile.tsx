@@ -62,7 +62,7 @@ export function FounderProfile() {
                     LinkedIn
                   </Button>
                 </a>
-                <a href={`mailto:hello@lightningai.solutions`}>
+                <a href={`mailto:umang@lightningaisolutions.in`}>
                   <Button variant="outline" size="sm" className="gap-2">
                     <Mail className="h-4 w-4" />
                     Email
