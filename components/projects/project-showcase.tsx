@@ -13,7 +13,6 @@ interface ProjectShowcaseProps {
 }
 
 export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
-  const Icon = project.icon;
   const isEven = index % 2 === 0;
 
   return (
