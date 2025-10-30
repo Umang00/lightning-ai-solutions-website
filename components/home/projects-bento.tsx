@@ -1,10 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 const projects = [
   {
@@ -66,6 +68,8 @@ const projects = [
 ];
 
 export function ProjectsBento() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
   return (
     <section className="py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,17 +99,46 @@ export function ProjectsBento() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+              className="relative group p-2 h-full"
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
             >
-              <Link href={`/projects#${project.id}`} className="block group h-full">
-                <div className="relative h-full min-h-[200px] p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 overflow-hidden">
+              <AnimatePresence>
+                {hoveredIndex === index && (
+                  <motion.span
+                    className="absolute inset-0 h-full w-full bg-slate-800/80 block rounded-3xl"
+                    layoutId="hoverBackground"
+                    initial={{ opacity: 0 }}
+                    animate={{
+                      opacity: 1,
+                      transition: { duration: 0.15 },
+                    }}
+                    exit={{
+                      opacity: 0,
+                      transition: { duration: 0.15, delay: 0.1 },
+                    }}
+                  />
+                )}
+              </AnimatePresence>
+              
+              <Link href={`/projects#${project.id}`} className="block h-full">
+                <div className={cn(
+                  "relative h-full min-h-[200px] p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border transition-all duration-300 overflow-hidden z-20",
+                  hoveredIndex === index 
+                    ? "border-primary-blue/50" 
+                    : "border-slate-700/50"
+                )}>
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-5 group-hover:opacity-10 transition-opacity`} />
                   
-                  <div className="relative z-10 flex flex-col h-full">
+                  <div className="relative z-50 flex flex-col h-full">
                     <div className="flex items-start justify-between mb-3">
                       <h3 className="text-xl font-bold text-text-primary">
                         {project.title}
                       </h3>
-                      <ArrowRight className="h-4 w-4 text-primary-blue opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                      <ArrowRight className={cn(
+                        "h-4 w-4 text-primary-blue transition-all flex-shrink-0",
+                        hoveredIndex === index ? "opacity-100 translate-x-1" : "opacity-0"
+                      )} />
                     </div>
 
                     <p className="text-sm text-text-secondary mb-4 flex-grow">
