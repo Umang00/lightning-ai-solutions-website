@@ -18,11 +18,12 @@ export function ExpandableCaseStudy({ project, index }: ExpandableCaseStudyProps
 
   return (
     <motion.div
+      id={project.id}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
-      className="relative"
+      className="relative scroll-mt-20"
     >
       <div className="p-8 md:p-12 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/30 transition-all">
         {/* Header */}

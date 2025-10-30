@@ -1,6 +1,6 @@
 import { ProjectsHero } from "@/components/projects/hero";
-import { FeaturedProject } from "@/components/projects/featured-project";
-import { ProjectGrid } from "@/components/projects/project-grid";
+import { ProjectShowcase } from "@/components/projects/project-showcase";
+import { ALL_PROJECTS } from "@/lib/projects-data";
 
 export const metadata = {
   title: "Projects - Lightning AI Solutions",
@@ -11,8 +11,9 @@ export default function ProjectsPage() {
   return (
     <>
       <ProjectsHero />
-      <FeaturedProject />
-      <ProjectGrid />
+      {ALL_PROJECTS.map((project, index) => (
+        <ProjectShowcase key={project.id} project={project} index={index} />
+      ))}
     </>
   );
 }
