@@ -4,7 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ALL_PROJECTS } from "@/lib/projects-data";
 import { ArrowRight, Star, Users, TrendingUp, MessageSquare, Zap } from "lucide-react";
+
+// Featured project is Astro AI (first in the list)
+const featuredProject = ALL_PROJECTS[0];
 
 const features = [
   {
@@ -29,13 +33,6 @@ const features = [
   },
 ];
 
-const metrics = [
-  { label: "Engagement Boost", value: "200%", icon: TrendingUp },
-  { label: "Daily Users", value: "1,000+", icon: Users },
-  { label: "Avg Response Time", value: "3s", icon: Zap },
-  { label: "User Satisfaction", value: "4.8/5", icon: Star },
-];
-
 export function FeaturedProject() {
   return (
     <section className="py-20 bg-primary-slate">
@@ -53,11 +50,11 @@ export function FeaturedProject() {
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent">
-              Astro AI
+              {featuredProject.shortTitle}
             </span>
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            AI-powered Vedic astrology platform delivering personalized insights via WhatsApp
+            {featuredProject.description}
           </p>
         </motion.div>
 
@@ -92,27 +89,18 @@ export function FeaturedProject() {
           >
             <div>
               <h3 className="text-2xl font-bold text-text-primary mb-4">The Challenge</h3>
-              <p className="text-text-secondary">
-                Traditional astrology consultations are expensive, time-consuming, and often
-                inaccessible to most people. The client needed a scalable, automated solution that
-                could deliver accurate Vedic astrology insights instantly via WhatsApp.
-              </p>
+              <p className="text-text-secondary">{featuredProject.problem}</p>
             </div>
 
             <div>
               <h3 className="text-2xl font-bold text-text-primary mb-4">Our Solution</h3>
-              <p className="text-text-secondary mb-4">
-                We built a custom LLM fine-tuned on authentic Vedic astrology texts, integrated it
-                with WhatsApp Business API, and created an automated birth chart analysis system
-                that delivers personalized readings in real-time.
-              </p>
+              <p className="text-text-secondary mb-4">{featuredProject.solution}</p>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline">OpenAI GPT-4</Badge>
-                <Badge variant="outline">WhatsApp API</Badge>
-                <Badge variant="outline">LLM Fine-tuning</Badge>
-                <Badge variant="outline">RAG Pipeline</Badge>
-                <Badge variant="outline">Python</Badge>
-                <Badge variant="outline">PostgreSQL</Badge>
+                {featuredProject.technologies.map((tech, i) => (
+                  <Badge key={i} variant="outline">
+                    {tech}
+                  </Badge>
+                ))}
               </div>
             </div>
 
@@ -147,21 +135,17 @@ export function FeaturedProject() {
           transition={{ duration: 0.8 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
         >
-          {metrics.map((metric, index) => {
-            const Icon = metric.icon;
-            return (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 text-center"
-              >
-                <Icon className="h-6 w-6 text-primary-blue mx-auto mb-2" />
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent mb-1">
-                  {metric.value}
-                </div>
-                <div className="text-sm text-text-tertiary">{metric.label}</div>
+          {featuredProject.metrics.map((metric, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 text-center"
+            >
+              <div className="text-3xl font-bold bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent mb-1">
+                {metric.metric}
               </div>
-            );
-          })}
+              <div className="text-sm text-text-tertiary">{metric.label}</div>
+            </div>
+          ))}
         </motion.div>
 
         {/* CTA */}
