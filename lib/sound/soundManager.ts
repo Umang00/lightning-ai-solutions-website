@@ -1,7 +1,9 @@
 import { Howl } from 'howler';
 
+type SoundName = 'click' | 'hover' | 'success' | 'error' | 'whoosh';
+
 class SoundManager {
-  private sounds: Howl | null = null;
+  private sounds: { [key in SoundName]?: Howl } = {};
   private enabled: boolean = false;
   private lastPlayTime: { [key: string]: number } = {};
   private minPlayInterval = 100; // Minimum ms between same sound plays
@@ -14,26 +16,24 @@ class SoundManager {
     }
   }
 
-  // Initialize sound sprites
+  // Initialize individual sound files
   initialize() {
-    if (this.sounds) return; // Already initialized
+    if (Object.keys(this.sounds).length > 0) return; // Already initialized
 
-    this.sounds = new Howl({
-      src: ['/sounds/ui-sounds.mp3'],
-      sprite: {
-        click: [0, 100],         // Button clicks
-        hover: [200, 50],        // Hover sounds
-        success: [300, 500],     // Success notifications
-        error: [900, 400],       // Error notifications
-        whoosh: [1400, 200]      // Transitions
-      },
-      volume: 0.2  // Keep it subtle
+    const soundFiles: SoundName[] = ['click', 'hover', 'success', 'error', 'whoosh'];
+    
+    soundFiles.forEach(name => {
+      this.sounds[name] = new Howl({
+        src: [`/sounds/${name}.mp3`],
+        volume: 0.2,  // Keep it subtle
+        preload: true
+      });
     });
   }
 
   // Play a sound with rate limiting
-  play(soundName: string) {
-    if (!this.enabled || !this.sounds) return;
+  play(soundName: SoundName) {
+    if (!this.enabled || !this.sounds[soundName]) return;
 
     const now = Date.now();
     const lastPlay = this.lastPlayTime[soundName] || 0;
@@ -41,7 +41,7 @@ class SoundManager {
     // Rate limit to prevent sound stacking
     if (now - lastPlay < this.minPlayInterval) return;
 
-    this.sounds.play(soundName);
+    this.sounds[soundName]?.play();
     this.lastPlayTime[soundName] = now;
   }
 
@@ -66,11 +66,12 @@ class SoundManager {
     return this.enabled;
   }
 
-  // Set volume
+  // Set volume for all sounds
   setVolume(volume: number) {
-    if (this.sounds) {
-      this.sounds.volume(Math.max(0, Math.min(1, volume)));
-    }
+    const clampedVolume = Math.max(0, Math.min(1, volume));
+    Object.values(this.sounds).forEach(sound => {
+      sound?.volume(clampedVolume);
+    });
   }
 }
 
