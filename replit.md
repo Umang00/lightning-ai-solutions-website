@@ -36,44 +36,10 @@ The project utilizes Next.js 14 (App Router) with TypeScript and Tailwind CSS fo
     - Global `pt-16` padding on main elements for header clearance.
     - Autoscale deployment configured for Vercel.
 
-## Animation System (Added Nov 1, 2025)
-
-A production-ready animation system has been implemented to enhance user experience with smooth micro-interactions and scroll-triggered animations.
-
-### Animation Infrastructure
-- **Motion Configuration:** Centralized timing (fast: 0.18s, base: 0.32s, slow: 0.6s), easing curves, and stagger values in `lib/motion/config.ts`
-- **Reusable Variants:** Pre-built animation patterns (fadeInUp, slideIn, scaleIn, etc.) in `lib/motion/variants.ts`
-- **Motion Provider:** Global configuration wrapper with Framer Motion's MotionConfig for universal reduced motion support in `lib/motion/MotionProvider.tsx` - ALL animations across the site automatically respect user preferences
-- **Device Detection:** Performance optimization utility (`useDeviceType.ts`) that disables 3D effects on mobile/low-end devices
-- **Universal Control:** MotionConfig wrapper ensures every Framer Motion animation (motion.div, motion.p, etc.) globally honors reduced-motion preferences without component-level changes
-
-### Animation Components
-- **AnimatedSection:** Scroll-triggered section animations with viewport detection
-- **AnimatedCard:** Interactive cards with 3D tilt effect (desktop only), hover animations, and sound feedback
-- **AnimatedButton:** Micro-interaction button with scale animations and click sounds
-
-### Sound System (Fully Integrated - Nov 1, 2025)
-- **Sound Manager:** Singleton sound manager with rate limiting and localStorage preferences, using individual MP3 files
-- **Sound Effects:** Five sound effects fully integrated (click, hover, success, error, whoosh) in `public/sounds/`
-- **Sound Effects Hook:** React hook (`useSoundEffects`) for playing UI sounds with proper initialization
-- **Sound Toggle:** UI component in header for enabling/disabling sound effects
-- **Implementation:** Individual Howl instances per sound file, lazy initialization on first enable
-
-### Performance & Accessibility
-- **Reduced Motion Support:** Respects system `prefers-reduced-motion` setting and user preferences
-- **Lazy Loading:** GSAP loaded only when needed (not currently used but available for complex timelines)
-- **Device Optimization:** 3D effects disabled on mobile and low-end devices for 60fps performance
-- **Bundle Size:** ~100KB total (Framer Motion ~40KB, GSAP ~50KB lazy-loaded, Howler ~9KB)
-
-### Usage Example
-```typescript
-import { AnimatedSection } from '@/components/animations/AnimatedSection';
-import { fadeInUp } from '@/lib/motion/variants';
-
-<AnimatedSection variants={fadeInUp} delay={0.2}>
-  <h1>Your content here</h1>
-</AnimatedSection>
-```
+### Animations
+- **Framer Motion:** Used for smooth animations throughout the site (header nav items, hero content, etc.)
+- **Reduced Motion Compatibility:** Hero animations modified (Nov 1, 2025) to avoid `opacity: 0` in initial states, ensuring content remains visible when `prefers-reduced-motion` is enabled
+- **Animation Pattern:** Animations use `y` transforms for motion effects without opacity changes to maintain accessibility
 
 ## External Dependencies
 
@@ -81,6 +47,6 @@ import { fadeInUp } from '@/lib/motion/variants';
 - **Deployment Platform:** Vercel (configured for autoscale).
 - **Domain:** `lightningai.solutions` (to be configured post-deployment).
 - **UI Components:** `shadcn/ui`.
-- **Animation Libraries:** Framer Motion (primary), GSAP (lazy-loaded for complex timelines), Howler.js (sound effects), react-countup (number animations).
+- **Animation Libraries:** Framer Motion (for smooth UI animations), react-countup (number animations).
 - **Icons:** Lucide React.
 - **Form Handling:** React Hook Form with Zod validation.

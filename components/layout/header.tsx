@@ -6,8 +6,6 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { motion, AnimatePresence } from "framer-motion";
-import { SoundToggle } from "@/components/ui/SoundToggle";
-import { MotionToggle } from "@/components/ui/MotionToggle";
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,11 +23,11 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-8">
             {NAV_LINKS.map((link, index) => (
               <motion.div
                 key={link.href}
-                initial={{ opacity: 0, y: -10 }}
+                initial={{ y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
@@ -42,15 +40,8 @@ export function Header() {
                 </Link>
               </motion.div>
             ))}
-            
-            {/* Motion & Sound Toggles */}
-            <div className="flex items-center gap-1 border-l border-slate-700/50 pl-4 ml-2">
-              <MotionToggle />
-              <SoundToggle />
-            </div>
-            
             <motion.div
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: NAV_LINKS.length * 0.1 }}
             >
@@ -93,7 +84,7 @@ export function Header() {
                 {NAV_LINKS.map((link, index) => (
                   <motion.div
                     key={link.href}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
@@ -106,27 +97,10 @@ export function Header() {
                     </Link>
                   </motion.div>
                 ))}
-                {/* Motion & Sound Toggles */}
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: NAV_LINKS.length * 0.1 }}
-                  className="flex items-center gap-4 justify-center py-2"
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-text-tertiary">Animations</span>
-                    <MotionToggle />
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs text-text-tertiary">Sound</span>
-                    <SoundToggle />
-                  </div>
-                </motion.div>
-                
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: (NAV_LINKS.length + 1) * 0.1 }}
                 >
                   <a 
                     href="https://calendly.com/umangthakkar005/30min" 

@@ -5,7 +5,6 @@ import { Toaster } from "@/components/ui/toaster";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { CookieConsent } from "@/components/layout/cookie-consent";
-import { MotionProvider } from "@/lib/motion/MotionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -123,15 +122,13 @@ export default function RootLayout({
             }),
           }}
         />
-        <MotionProvider>
-          <Header />
-          <main className="min-h-screen pt-16">
-            {children}
-          </main>
-          <Footer />
-          <CookieConsent />
-          <Toaster />
-        </MotionProvider>
+        <Header />
+        <main className="min-h-screen pt-16">
+          {children}
+        </main>
+        <Footer />
+        <CookieConsent />
+        <Toaster />
       </body>
     </html>
   );
