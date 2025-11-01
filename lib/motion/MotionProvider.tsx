@@ -22,33 +22,25 @@ interface MotionProviderProps {
   children: ReactNode;
 }
 
-// Initialize motion state synchronously to avoid flash of animation
-function getInitialMotionState(): boolean {
-  // During SSR, default to enabled (will be corrected on client)
-  if (typeof window === 'undefined') return true;
-  
-  // Check user preference first (stored in localStorage)
-  const userPreference = getMotionPreference();
-  
-  // Check system preference
-  const systemPrefersReduced = shouldReduceMotion();
-  
-  // Priority: User preference overrides system preference
-  // If user has explicitly set a preference, use it
-  // Otherwise, respect system preference
-  const hasUserPreference = localStorage.getItem('motion-enabled') !== null;
-  
-  if (hasUserPreference) {
-    return userPreference;
-  }
-  
-  // No explicit user preference, respect system setting
-  return !systemPrefersReduced;
-}
-
 export function MotionProvider({ children }: MotionProviderProps) {
-  // Initialize with correct value immediately
-  const [motionEnabled, setMotionEnabledState] = useState(getInitialMotionState);
+  // Start with true for SSR, will sync on mount
+  const [motionEnabled, setMotionEnabledState] = useState(true);
+  const [mounted, setMounted] = useState(false);
+
+  // Sync with preferences after mount to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+    
+    // Check user preference first
+    const hasUserPreference = localStorage.getItem('motion-enabled') !== null;
+    
+    if (hasUserPreference) {
+      setMotionEnabledState(getMotionPreference());
+    } else {
+      // Respect system preference if no user preference
+      setMotionEnabledState(!shouldReduceMotion());
+    }
+  }, []);
 
   const toggleMotion = () => {
     const newState = !motionEnabled;
