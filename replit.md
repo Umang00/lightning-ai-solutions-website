@@ -36,17 +36,12 @@ The project utilizes Next.js 14 (App Router) with TypeScript and Tailwind CSS fo
     - Global `pt-16` padding on main elements for header clearance.
     - Autoscale deployment configured for Vercel.
 
-### Animations
-- **Framer Motion:** Used for smooth animations throughout the site (header nav items, hero content, etc.)
-- **Reduced Motion Compatibility:** Hero animations modified (Nov 1, 2025) to avoid `opacity: 0` in initial states, ensuring content remains visible when `prefers-reduced-motion` is enabled
-- **Animation Pattern:** Animations use `y` transforms for motion effects without opacity changes to maintain accessibility
-
 ## External Dependencies
 
 - **Email Service:** Resend API for contact form submissions.
 - **Deployment Platform:** Vercel (configured for autoscale).
 - **Domain:** `lightningai.solutions` (to be configured post-deployment).
 - **UI Components:** `shadcn/ui`.
-- **Animation Libraries:** Framer Motion (for smooth UI animations), react-countup (number animations).
+- **Animation Library:** Framer Motion.
 - **Icons:** Lucide React.
 - **Form Handling:** React Hook Form with Zod validation.

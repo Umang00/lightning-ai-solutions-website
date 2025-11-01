@@ -66,7 +66,7 @@ export function LegalPage({ title, lastUpdated, sections }: LegalPageProps) {
           </Link>
 
           <motion.div
-            initial={{ y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="flex items-center gap-4 mb-6"
@@ -81,7 +81,7 @@ export function LegalPage({ title, lastUpdated, sections }: LegalPageProps) {
           </motion.div>
 
           <motion.p
-            initial={{ y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg text-text-secondary"
@@ -99,7 +99,7 @@ export function LegalPage({ title, lastUpdated, sections }: LegalPageProps) {
             {sections.map((section, index) => (
               <motion.div
                 key={index}
-                initial={{ y: 20 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -116,7 +116,7 @@ export function LegalPage({ title, lastUpdated, sections }: LegalPageProps) {
           </div>
 
           <motion.div
-            initial={{ y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}

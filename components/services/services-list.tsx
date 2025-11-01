@@ -96,7 +96,7 @@ export function ServicesList() {
             <motion.div
               key={service.id}
               id={service.id}
-              initial={{ y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -127,7 +127,7 @@ export function ServicesList() {
                           <motion.li 
                             key={i} 
                             className="flex items-start text-sm text-text-secondary"
-                            initial={{ x: -10 }}
+                            initial={{ opacity: 0, x: -10 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
@@ -147,7 +147,7 @@ export function ServicesList() {
                           <motion.span
                             key={i}
                             className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary hover:border-primary-blue/30 hover:text-text-secondary transition-all cursor-default"
-                            initial={{ scale: 0.8 }}
+                            initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.05 }}

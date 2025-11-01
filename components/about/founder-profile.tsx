@@ -11,7 +11,7 @@ export function FounderProfile() {
     <section className="py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -30,7 +30,7 @@ export function FounderProfile() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
           {/* Photo Column */}
           <motion.div
-            initial={{ x: -20 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -74,7 +74,7 @@ export function FounderProfile() {
 
           {/* Content Column */}
           <motion.div
-            initial={{ x: 20 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}

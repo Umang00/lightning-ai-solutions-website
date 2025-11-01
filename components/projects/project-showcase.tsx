@@ -19,7 +19,7 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
     <section className={`py-20 ${isEven ? 'bg-primary-slate' : 'bg-primary-dark'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -36,7 +36,7 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
         </motion.div>
 
         <motion.div
-          initial={{ y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -87,7 +87,7 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
 
         {/* Metrics */}
         <motion.div
-          initial={{ y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -108,7 +108,7 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
 
         {/* CTA */}
         <motion.div
-          initial={{ y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}

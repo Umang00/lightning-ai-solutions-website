@@ -27,7 +27,7 @@ export function Header() {
             {NAV_LINKS.map((link, index) => (
               <motion.div
                 key={link.href}
-                initial={{ y: -10 }}
+                initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
@@ -41,7 +41,7 @@ export function Header() {
               </motion.div>
             ))}
             <motion.div
-              initial={{ y: -10 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: NAV_LINKS.length * 0.1 }}
             >
@@ -84,7 +84,7 @@ export function Header() {
                 {NAV_LINKS.map((link, index) => (
                   <motion.div
                     key={link.href}
-                    initial={{ x: -20 }}
+                    initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
@@ -98,7 +98,7 @@ export function Header() {
                   </motion.div>
                 ))}
                 <motion.div
-                  initial={{ x: -20 }}
+                  initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: NAV_LINKS.length * 0.1 }}
                 >

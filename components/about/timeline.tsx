@@ -29,7 +29,7 @@ export function Timeline() {
     <section className="py-20 bg-primary-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
@@ -47,7 +47,7 @@ export function Timeline() {
 
         <div className="max-w-5xl mx-auto">
           <motion.div
-            initial={{ y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -68,7 +68,7 @@ export function Timeline() {
 
             {/* What We've Built Section */}
             <motion.div
-              initial={{ y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -81,7 +81,7 @@ export function Timeline() {
                 {journeyData.whatWeBuilt.map((item, index) => (
                   <motion.li
                     key={index}
-                    initial={{ x: -20 }}
+                    initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
@@ -96,7 +96,7 @@ export function Timeline() {
 
             {/* Our Focus Section */}
             <motion.div
-              initial={{ y: 20 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
@@ -108,7 +108,7 @@ export function Timeline() {
                 {journeyData.ourFocus.map((item, index) => (
                   <motion.li
                     key={index}
-                    initial={{ x: -20 }}
+                    initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: 0.7 + index * 0.05 }}
