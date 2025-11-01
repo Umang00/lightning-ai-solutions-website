@@ -2,68 +2,31 @@
 
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
-import { CardStack } from "@/components/ui/card-stack";
 
 const testimonials = [
   {
-    id: 1,
     name: "Priya Sharma",
-    designation: "CEO, HealthFirst",
-    content: (
-      <div className="space-y-3">
-        <div className="flex gap-1 mb-2">
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              className="h-4 w-4 fill-primary-yellow text-primary-yellow"
-            />
-          ))}
-        </div>
-        <p className="text-neutral-600 dark:text-neutral-300 text-sm italic">
-          "Lightning AI Solutions transformed our customer support with their voice AI agent. We're now handling 100+ daily consultations automatically, saving $10,000+ monthly while improving response times by 70%."
-        </p>
-      </div>
-    ),
+    role: "CEO, HealthTech Startup",
+    content:
+      "Lightning AI Solutions transformed our customer support with their voice AI agent. We're now handling 100+ daily consultations automatically, saving $10,000+ monthly while improving response times by 70%.",
+    rating: 5,
+    company: "HealthFirst",
   },
   {
-    id: 2,
     name: "Rajesh Patel",
-    designation: "CTO, ShopSmart",
-    content: (
-      <div className="space-y-3">
-        <div className="flex gap-1 mb-2">
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              className="h-4 w-4 fill-primary-yellow text-primary-yellow"
-            />
-          ))}
-        </div>
-        <p className="text-neutral-600 dark:text-neutral-300 text-sm italic">
-          "The team delivered our AI-powered recommendation engine in just 4 weeks. User engagement is up 200%, and the solution scales effortlessly. Exceptional technical expertise and project management."
-        </p>
-      </div>
-    ),
+    role: "CTO, E-commerce Platform",
+    content:
+      "The team delivered our AI-powered recommendation engine in just 4 weeks. User engagement is up 200%, and the solution scales effortlessly. Exceptional technical expertise and project management.",
+    rating: 5,
+    company: "ShopSmart",
   },
   {
-    id: 3,
     name: "Anita Desai",
-    designation: "Product Manager, DataFlow",
-    content: (
-      <div className="space-y-3">
-        <div className="flex gap-1 mb-2">
-          {[...Array(5)].map((_, i) => (
-            <Star
-              key={i}
-              className="h-4 w-4 fill-primary-yellow text-primary-yellow"
-            />
-          ))}
-        </div>
-        <p className="text-neutral-600 dark:text-neutral-300 text-sm italic">
-          "Working with Umang and his team was a game-changer. Their LLM fine-tuning expertise helped us create a domain-specific AI that outperforms generic models by 40%. ROI achieved within 2 months."
-        </p>
-      </div>
-    ),
+    role: "Product Manager, SaaS Company",
+    content:
+      "Working with Umang and his team was a game-changer. Their LLM fine-tuning expertise helped us create a domain-specific AI that outperforms generic models by 40%. ROI achieved within 2 months.",
+    rating: 5,
+    company: "DataFlow",
   },
 ];
 
@@ -88,15 +51,53 @@ export function Testimonials() {
           </p>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex items-center justify-center"
-        >
-          <CardStack items={testimonials} />
-        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative group"
+            >
+              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300">
+                {/* Quote Icon */}
+                <div className="absolute top-6 right-6 opacity-10">
+                  <Quote className="h-12 w-12 text-primary-blue" />
+                </div>
+
+                {/* Stars */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 fill-primary-yellow text-primary-yellow"
+                    />
+                  ))}
+                </div>
+
+                {/* Content */}
+                <p className="text-text-secondary mb-6 relative z-10 italic">
+                  "{testimonial.content}"
+                </p>
+
+                {/* Author */}
+                <div className="relative z-10">
+                  <div className="font-semibold text-text-primary">
+                    {testimonial.name}
+                  </div>
+                  <div className="text-sm text-text-tertiary">
+                    {testimonial.role}
+                  </div>
+                  <div className="text-sm text-primary-blue mt-1">
+                    {testimonial.company}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

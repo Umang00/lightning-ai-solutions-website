@@ -26,13 +26,8 @@ The project utilizes Next.js 14 (App Router) with TypeScript and Tailwind CSS fo
 - **Pages:** Consists of 6 main pages (Homepage, About Us, Projects, Services, Case Studies, Contact) and 4 legal pages (Privacy Policy, Terms of Service, Cookie Policy, Refund Policy) crucial for WhatsApp API compliance.
 - **Legal Pages (Updated Oct 30, 2025):** All 4 legal policies updated with comprehensive dual-purpose B2B/B2C content covering client services and Astro AI subscriptions, including international taxation, GDPR/CCPA compliance, WhatsApp Business API requirements, detailed refund policies, and cookie consent management.
 - **SEO & Optimization:** Comprehensive metadata (Open Graph, Twitter Card, JSON-LD), dynamic sitemap generation, `robots.txt` configuration, and page-level metadata across all routes.
-- **Premium UI Enhancements (Updated Oct 30, 2025):** Integrated Aceternity UI components for enhanced visual impact:
-    - **Background Beams:** Animated SVG beam effects in hero section for dramatic first impression
-    - **Card Hover Effect:** Subtle sliding background animation on project cards - keeps all content visible while adding premium polish
-    - **Card Stack:** Auto-shuffling testimonial cards with 5-second rotation
-    - All components use existing cyan→purple gradient brand colors
 - **Key Decisions:**
-    - Usage of 80% pre-built `shadcn/ui` components + Aceternity UI for premium animations.
+    - Usage of 80% pre-built `shadcn/ui` components.
     - Dark mode only (no light mode toggle).
     - Development server runs on port 5000.
     - Mobile-first responsive design.
@@ -46,7 +41,7 @@ The project utilizes Next.js 14 (App Router) with TypeScript and Tailwind CSS fo
 - **Email Service:** Resend API for contact form submissions.
 - **Deployment Platform:** Vercel (configured for autoscale).
 - **Domain:** `lightningai.solutions` (to be configured post-deployment).
-- **UI Components:** `shadcn/ui` + Aceternity UI (Background Beams, Card Hover Effect, Card Stack).
-- **Animation Library:** Framer Motion + Motion/React (used by Aceternity components).
+- **UI Components:** `shadcn/ui`.
+- **Animation Library:** Framer Motion.
 - **Icons:** Lucide React.
 - **Form Handling:** React Hook Form with Zod validation.

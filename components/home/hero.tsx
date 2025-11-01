@@ -4,16 +4,12 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary-slate to-primary-dark" />
-      
-      {/* Background Beams Effect */}
-      <BackgroundBeams className="absolute inset-0" />
       
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden">
