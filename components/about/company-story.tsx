@@ -28,9 +28,7 @@ export function CompanyStory() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            Founded in {COMPANY.founded}, {COMPANY.name} was born from a simple belief: AI should
-            be accessible, practical, and deliver real business value. Not just theoretical
-            possibilities or flashy demos, but production-ready solutions that scale.
+            Founded in {COMPANY.founded}, {COMPANY.name} was born from years of hands-on experience solving real business challenges with AI. Our founder spent years working directly with startups and established businesses, witnessing firsthand the gap between AI's theoretical potential and its practical implementation.
           </motion.p>
 
           <motion.p
@@ -39,10 +37,7 @@ export function CompanyStory() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            What started as a vision to democratize AI has evolved into a track record of 7+
-            successful AI products serving 5M+ users. From voice agents automating 100+ daily
-            interviews to LLM-powered platforms driving 200% engagement increases, we've proven that
-            AI can transform businesses when implemented thoughtfully.
+            What we saw repeatedly was this: businesses didn't need more flashy demos or theoretical possibilities. They needed production-ready solutions that could be deployed quickly, scale reliably, and deliver measurable ROI from day one.
           </motion.p>
 
           <motion.p
@@ -51,10 +46,7 @@ export function CompanyStory() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Based in {COMPANY.location}, we work with startups and established businesses across
-            industries—from healthtech to e-commerce, SaaS to fintech. Our approach is simple: we
-            listen to your challenges, design solutions grounded in proven AI techniques, and
-            deliver products that work from day one.
+            That insight became our founding principle. We established {COMPANY.name} to bridge this gap—building AI products that are accessible, practical, and engineered to deliver real business value immediately.
           </motion.p>
 
           <motion.p
@@ -63,9 +55,16 @@ export function CompanyStory() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            We're not just AI developers—we're product builders who happen to specialize in AI. We
-            obsess over user experience, worry about production edge cases, and measure success by
-            the impact our solutions deliver, not the complexity of the models we deploy.
+            Based in {COMPANY.location}, we work with startups and established businesses across industries—from healthtech to e-commerce, SaaS to fintech. Our approach is simple: we listen to your challenges, design solutions grounded in proven AI techniques, and deliver products that work from day one.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            We're not just AI developers—we're product builders who happen to specialize in AI. We obsess over user experience, worry about production edge cases, and measure success by the impact our solutions deliver, not the complexity of the models we deploy.
           </motion.p>
         </div>
 

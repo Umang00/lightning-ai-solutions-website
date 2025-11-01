@@ -3,46 +3,26 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
-const milestones = [
-  {
-    year: "2022",
-    title: "The Beginning",
-    description: "Started building AI products with a focus on practical, production-ready solutions",
-    achievements: ["First AI product launched", "Established core methodology"],
-  },
-  {
-    year: "2023",
-    title: "Rapid Growth",
-    description: "Expanded product portfolio and client base across multiple industries",
-    achievements: [
-      "3 major AI products deployed",
-      "Reached 10,000+ users milestone",
-      "Achieved 200% engagement boost for key client",
-    ],
-  },
-  {
-    year: "2024",
-    title: "Scale & Innovation",
-    description: "Built advanced voice AI and LLM solutions, established Lightning AI Solutions",
-    achievements: [
-      "Voice agent handling 100+ daily interviews",
-      "70% cost reduction for enterprise client",
-      "7+ products in production",
-      "5M+ users served",
-    ],
-  },
-  {
-    year: "2025",
-    title: "Expansion",
-    description: "Scaling impact with focus on WhatsApp API integration and enterprise solutions",
-    achievements: [
-      "Astro AI platform development",
-      "WhatsApp Business API integration",
-      "Advanced LLM fine-tuning services",
-      "Building next-gen AI products",
-    ],
-  },
-];
+const journeyData = {
+  year: "2025",
+  title: "Foundation & Rapid Execution",
+  description: "Lightning AI Solutions officially established with a clear mission: make AI accessible and practical for businesses of all sizes",
+  whatWeBuilt: [
+    "Launched production-ready AI solutions across multiple industries",
+    "Deployed voice agents handling 100+ daily automated interactions",
+    "Built advanced LLM-powered platforms driving 200% engagement increases",
+    "Established WhatsApp Business API integration capabilities",
+    "Developed Astro AI platform for intelligent automation",
+    "Created advanced LLM fine-tuning services",
+    "Serving clients across healthtech, e-commerce, SaaS, and fintech sectors",
+  ],
+  ourFocus: [
+    "Production-ready solutions over theoretical demos",
+    "Rapid deployment and measurable business impact",
+    "Scalable AI products built with proven methodologies",
+    "Building next-generation AI products that transform how businesses operate",
+  ],
+};
 
 export function Timeline() {
   return (
@@ -61,67 +41,86 @@ export function Timeline() {
             </span>
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            From startup to success—building AI products that make a difference
+            From vision to reality—building AI products that make a difference
           </p>
         </motion.div>
 
-        <div className="relative">
-          {/* Timeline Line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-primary-blue via-primary-purple to-primary-blue" />
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="p-8 md:p-10 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all"
+          >
+            {/* Year and Title */}
+            <div className="text-center mb-8">
+              <div className="text-5xl md:text-6xl font-bold text-primary-blue mb-4">
+                {journeyData.year}
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4">
+                {journeyData.title}
+              </h3>
+              <p className="text-text-secondary text-lg max-w-3xl mx-auto">
+                {journeyData.description}
+              </p>
+            </div>
 
-          {/* Milestones */}
-          <div className="space-y-12">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center ${
-                  index % 2 === 0 ? "" : "md:flex-row-reverse"
-                }`}
-              >
-                {/* Left/Right Content */}
-                <div className={`${index % 2 === 0 ? "md:text-right" : "md:col-start-2"}`}>
-                  <div
-                    className={`inline-block p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all ${
-                      index % 2 === 0 ? "md:mr-8" : "md:ml-8"
-                    }`}
+            {/* What We've Built Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="mb-8"
+            >
+              <h4 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
+                <span className="text-primary-blue">What We've Built:</span>
+              </h4>
+              <ul className="space-y-3">
+                {journeyData.whatWeBuilt.map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
+                    className="flex items-start gap-3 text-text-secondary"
                   >
-                    <div className="text-4xl font-bold text-primary-blue mb-2">
-                      {milestone.year}
-                    </div>
-                    <h3 className="text-2xl font-bold text-text-primary mb-2">
-                      {milestone.title}
-                    </h3>
-                    <p className="text-text-secondary mb-4">{milestone.description}</p>
-                    <ul className="space-y-2">
-                      {milestone.achievements.map((achievement, i) => (
-                        <li
-                          key={i}
-                          className={`flex items-center gap-2 text-sm text-text-tertiary ${
-                            index % 2 === 0 ? "md:flex-row-reverse md:text-right" : ""
-                          }`}
-                        >
-                          <Check className="h-4 w-4 text-primary-blue flex-shrink-0" />
-                          <span>{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                    <Check className="h-5 w-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
 
-                {/* Center Dot */}
-                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2">
-                  <div className="w-4 h-4 rounded-full bg-primary-blue border-4 border-primary-slate" />
-                </div>
-
-                {/* Spacer for grid */}
-                <div className={`hidden md:block ${index % 2 === 0 ? "md:col-start-2" : ""}`} />
-              </motion.div>
-            ))}
-          </div>
+            {/* Our Focus Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <h4 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
+                <span className="text-primary-purple">Our Focus:</span>
+              </h4>
+              <ul className="space-y-3">
+                {journeyData.ourFocus.map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.7 + index * 0.05 }}
+                    className="flex items-start gap-3 text-text-secondary"
+                  >
+                    <Check className="h-5 w-5 text-primary-purple flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

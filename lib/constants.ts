@@ -7,7 +7,7 @@ export const COMPANY = {
   pincode: "388001",
   email: "umang@lightningaisolutions.in",
   phone: "+91 9426154668",
-  founded: "2024",
+  founded: "2025",
 } as const;
 
 // Founder Information
