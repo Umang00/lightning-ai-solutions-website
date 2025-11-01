@@ -54,7 +54,7 @@ class SoundManager {
     }
 
     // Initialize on first enable
-    if (this.enabled && !this.sounds) {
+    if (this.enabled && Object.keys(this.sounds).length === 0) {
       this.initialize();
     }
 

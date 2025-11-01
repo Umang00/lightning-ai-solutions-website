@@ -1,6 +1,7 @@
 'use client';
 
 import { ReactNode, createContext, useContext, useEffect, useState } from 'react';
+import { MotionConfig } from 'framer-motion';
 import { getMotionPreference, shouldReduceMotion, setMotionPreference } from './config';
 
 interface MotionContextType {
@@ -57,7 +58,9 @@ export function MotionProvider({ children }: MotionProviderProps) {
 
   return (
     <MotionContext.Provider value={{ motionEnabled, toggleMotion }}>
-      {children}
+      <MotionConfig reducedMotion={motionEnabled ? 'never' : 'always'}>
+        {children}
+      </MotionConfig>
     </MotionContext.Provider>
   );
 }
