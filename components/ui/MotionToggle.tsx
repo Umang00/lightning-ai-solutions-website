@@ -1,7 +1,7 @@
 'use client';
 
 import { useMotion } from '@/lib/motion/MotionProvider';
-import { Sparkles, SparklesIcon as SparklesOff } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export function MotionToggle() {
   const { motionEnabled, toggleMotion } = useMotion();
@@ -15,9 +15,9 @@ export function MotionToggle() {
       title={`Animations ${motionEnabled ? 'ON' : 'OFF'}`}
     >
       {motionEnabled ? (
-        <Sparkles className="w-5 h-5 text-primary-purple" />
+        <Sparkles className="w-5 h-5 text-primary-purple fill-primary-purple" />
       ) : (
-        <SparklesOff className="w-5 h-5 text-text-tertiary" />
+        <Sparkles className="w-5 h-5 text-text-tertiary" />
       )}
     </button>
   );

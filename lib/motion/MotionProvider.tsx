@@ -23,23 +23,21 @@ interface MotionProviderProps {
 }
 
 export function MotionProvider({ children }: MotionProviderProps) {
-  // Start with true for SSR, will sync on mount
+  // Always default to enabled - user can toggle off if desired
   const [motionEnabled, setMotionEnabledState] = useState(true);
-  const [mounted, setMounted] = useState(false);
 
-  // Sync with preferences after mount to avoid hydration mismatch
+  // Load saved preference after mount
   useEffect(() => {
-    setMounted(true);
-    
-    // Check user preference first
-    const hasUserPreference = localStorage.getItem('motion-enabled') !== null;
-    
-    if (hasUserPreference) {
-      setMotionEnabledState(getMotionPreference());
+    const savedPreference = localStorage.getItem('motion-enabled');
+    if (savedPreference !== null) {
+      setMotionEnabledState(savedPreference === 'true');
     } else {
-      // Respect system preference if no user preference
-      setMotionEnabledState(!shouldReduceMotion());
+      // No saved preference - explicitly save default as enabled
+      localStorage.setItem('motion-enabled', 'true');
+      setMotionEnabledState(true);
     }
+    // Note: We ignore system prefers-reduced-motion to ensure content is always visible
+    // Users can toggle motion off if they prefer
   }, []);
 
   const toggleMotion = () => {
@@ -50,7 +48,7 @@ export function MotionProvider({ children }: MotionProviderProps) {
 
   return (
     <MotionContext.Provider value={{ motionEnabled, toggleMotion }}>
-      <MotionConfig reducedMotion={motionEnabled ? 'never' : 'always'}>
+      <MotionConfig reducedMotion="never">
         {children}
       </MotionConfig>
     </MotionContext.Provider>
