@@ -3,14 +3,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
 import Link from "next/link";
-import { AnimatedButtonLink } from "@/components/animations";
 import { useSound } from "@/lib/sounds/soundManager";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 export function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
   const { play } = useSound();
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     const consent = localStorage.getItem("cookie-consent");
@@ -62,23 +62,47 @@ export function CookieConsent() {
                 transition={{ delay: 0.3 }}
                 className="flex items-center gap-3"
               >
-                <AnimatedButtonLink onClick={declineCookies}>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="border-slate-600 hover:bg-slate-700"
-                  >
-                    Decline
-                  </Button>
-                </AnimatedButtonLink>
-                <AnimatedButtonLink onClick={acceptCookies}>
-                  <Button
-                    size="sm"
-                    className="bg-gradient-to-r from-primary-blue to-primary-purple"
-                  >
-                    Accept
-                  </Button>
-                </AnimatedButtonLink>
+                {shouldReduceMotion ? (
+                  <>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-slate-600 hover:bg-slate-700"
+                      onClick={declineCookies}
+                    >
+                      Decline
+                    </Button>
+                    <Button
+                      size="sm"
+                      className="bg-gradient-to-r from-primary-blue to-primary-purple"
+                      onClick={acceptCookies}
+                    >
+                      Accept
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="border-slate-600 hover:bg-slate-700"
+                        onClick={declineCookies}
+                      >
+                        Decline
+                      </Button>
+                    </motion.div>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                      <Button
+                        size="sm"
+                        className="bg-gradient-to-r from-primary-blue to-primary-purple"
+                        onClick={acceptCookies}
+                      >
+                        Accept
+                      </Button>
+                    </motion.div>
+                  </>
+                )}
               </motion.div>
             </div>
           </div>
