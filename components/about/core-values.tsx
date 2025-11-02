@@ -93,7 +93,7 @@ export function CoreValues() {
                 <AnimatedCardGridItem
                   variant="lift"
                   className="group h-full"
-                  onMouseEnter={() => play("hover")}
+                  enableSound={true}
                 >
                 <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300">
                   <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary-blue/20 to-primary-purple/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
