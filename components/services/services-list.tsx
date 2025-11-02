@@ -93,9 +93,9 @@ export function ServicesList() {
   const { play } = useSound();
 
   return (
-    <section className="py-20 bg-primary-slate">
+    <section className="py-12 sm:py-16 lg:py-20 bg-primary-slate">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-8">
+        <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -106,32 +106,32 @@ export function ServicesList() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
               onHoverStart={() => play("hover")}
-              className="scroll-mt-24 p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/30 hover:shadow-2xl hover:shadow-primary-blue/10 transition-all duration-300 group"
+              className="scroll-mt-24 p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/30 hover:shadow-2xl hover:shadow-primary-blue/10 transition-all duration-300 group"
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 sm:gap-6">
                 {/* Main Content */}
                 <div className="flex-1">
-                  <div className="inline-block px-4 py-2 rounded-full bg-primary-blue/10 border border-primary-blue/30 mb-4">
-                    <span className="text-sm text-primary-blue font-semibold">
+                  <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary-blue/10 border border-primary-blue/30 mb-3 sm:mb-4">
+                    <span className="text-xs sm:text-sm text-primary-blue font-semibold">
                       {service.tagline}
                     </span>
                   </div>
 
-                  <h2 className="text-2xl md:text-3xl font-bold mb-3 text-text-primary">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-text-primary leading-tight">
                     {service.title}
                   </h2>
 
-                  <p className="text-base text-text-secondary mb-6">{service.description}</p>
+                  <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-6">{service.description}</p>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
                     {/* Features */}
                     <div>
-                      <h4 className="font-semibold text-text-primary mb-3 text-sm">What You Get:</h4>
-                      <ul className="space-y-2">
+                      <h4 className="font-semibold text-text-primary mb-2 sm:mb-3 text-xs sm:text-sm">What You Get:</h4>
+                      <ul className="space-y-1.5 sm:space-y-2">
                         {service.features.map((feature, i) => (
                           <motion.li 
                             key={i} 
-                            className="flex items-start text-sm text-text-secondary"
+                            className="flex items-start text-xs sm:text-sm text-text-secondary"
                             initial={{ opacity: 0, x: -10 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -146,8 +146,8 @@ export function ServicesList() {
 
                     {/* Technologies */}
                     <div>
-                      <h4 className="font-semibold text-text-primary mb-3 text-sm">Technologies:</h4>
-                      <div className="flex flex-wrap gap-2">
+                      <h4 className="font-semibold text-text-primary mb-2 sm:mb-3 text-xs sm:text-sm">Technologies:</h4>
+                      <div className="flex flex-wrap gap-1.5 sm:gap-2">
                         {service.technologies.map((tech, i) => (
                           <motion.div
                             key={i}

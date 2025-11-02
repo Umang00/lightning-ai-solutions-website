@@ -12,9 +12,9 @@ export function FounderHighlight() {
   const { play } = useSound();
 
   return (
-    <section className="py-20 bg-primary-dark">
+    <section className="py-12 sm:py-16 lg:py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -48,17 +48,17 @@ export function FounderHighlight() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block px-4 py-2 rounded-full bg-primary-blue/10 border border-primary-blue/30 mb-6">
-              <span className="text-sm text-primary-blue font-semibold">Meet the Founder</span>
+            <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary-blue/10 border border-primary-blue/30 mb-4 sm:mb-6">
+              <span className="text-xs sm:text-sm text-primary-blue font-semibold">Meet the Founder</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
               <span className="text-text-primary">{FOUNDER.name}</span>
             </h2>
 
-            <h3 className="text-xl text-text-secondary mb-6">{FOUNDER.title}</h3>
+            <h3 className="text-lg sm:text-xl text-text-secondary mb-4 sm:mb-6">{FOUNDER.title}</h3>
 
-            <div className="space-y-4 text-text-secondary mb-8">
+            <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-text-secondary mb-6 sm:mb-8">
               <p>
                 With over {FOUNDER.experience} years of hands-on experience building AI products,
                 Umang has led the development of 7+ successful AI solutions from concept to
@@ -91,7 +91,7 @@ export function FounderHighlight() {
             </div>
 
             {/* Key Metrics */}
-            <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-slate-700/50">
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-slate-700/50">
               <AnimatedStatCard
                 value={4}
                 suffix="+"

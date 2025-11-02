@@ -35,26 +35,26 @@ export function Testimonials() {
   const { play } = useSound();
 
   return (
-    <section className="py-20 bg-primary-dark">
+    <section className="py-12 sm:py-16 lg:py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight px-2">
             <span className="bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent">
               Client Success Stories
             </span>
           </h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto px-4">
             Don't just take our word for it - hear from clients who've experienced the impact
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -66,17 +66,17 @@ export function Testimonials() {
               onHoverStart={() => play("hover")}
               className="relative group cursor-pointer"
             >
-              <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary-blue/20">
+              <div className="h-full p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary-blue/20">
                 {/* Quote Icon */}
                 <motion.div
-                  className="absolute top-6 right-6 opacity-10"
+                  className="absolute top-4 right-4 sm:top-6 sm:right-6 opacity-10"
                   whileHover={{ rotate: 10, scale: 1.1 }}
                 >
-                  <Quote className="h-12 w-12 text-primary-blue" />
+                  <Quote className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-primary-blue" />
                 </motion.div>
 
                 {/* Stars */}
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-0.5 sm:gap-1 mb-3 sm:mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <motion.div
                       key={i}
@@ -91,25 +91,25 @@ export function Testimonials() {
                         damping: 20,
                       }}
                     >
-                      <Star className="h-5 w-5 fill-primary-yellow text-primary-yellow" />
+                      <Star className="h-4 w-4 sm:h-5 sm:w-5 fill-primary-yellow text-primary-yellow" />
                     </motion.div>
                   ))}
                 </div>
 
                 {/* Content */}
-                <p className="text-text-secondary mb-6 relative z-10 italic">
+                <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-6 relative z-10 italic">
                   "{testimonial.content}"
                 </p>
 
                 {/* Author */}
                 <div className="relative z-10">
-                  <div className="font-semibold text-text-primary">
+                  <div className="text-sm sm:text-base font-semibold text-text-primary">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-text-tertiary">
+                  <div className="text-xs sm:text-sm text-text-tertiary">
                     {testimonial.role}
                   </div>
-                  <div className="text-sm text-primary-blue mt-1">
+                  <div className="text-xs sm:text-sm text-primary-blue mt-1">
                     {testimonial.company}
                   </div>
                 </div>
