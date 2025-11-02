@@ -70,26 +70,26 @@ export function ProjectsBento() {
   const { play } = useSound();
 
   return (
-    <section className="py-20 bg-primary-dark">
+    <section className="py-12 sm:py-16 lg:py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight px-2">
             <span className="bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent">
               Featured Projects
             </span>
           </h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto px-4">
             Real-world AI solutions delivering measurable impact
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {/* All Projects */}
           {projects.map((project, index) => (
             <motion.div
@@ -102,27 +102,27 @@ export function ProjectsBento() {
               onHoverStart={() => play("hover")}
             >
               <Link href={`/projects#${project.id}`} className="block group h-full">
-                <div className="relative h-full min-h-[200px] p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 overflow-hidden hover:shadow-xl hover:shadow-primary-blue/20">
+                <div className="relative h-full min-h-[180px] sm:min-h-[200px] p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 overflow-hidden hover:shadow-xl hover:shadow-primary-blue/20">
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-5 group-hover:opacity-10 transition-opacity`} />
 
                   <div className="relative z-10 flex flex-col h-full">
-                    <div className="flex items-start justify-between mb-3">
-                      <h3 className="text-xl font-bold text-text-primary">
+                    <div className="flex items-start justify-between mb-2 sm:mb-3">
+                      <h3 className="text-lg sm:text-xl font-bold text-text-primary">
                         {project.title}
                       </h3>
                       <motion.div
                         initial={{ opacity: 0 }}
                         whileHover={{ opacity: 1, x: 3 }}
                       >
-                        <ArrowRight className="h-4 w-4 text-primary-blue flex-shrink-0" />
+                        <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 text-primary-blue flex-shrink-0" />
                       </motion.div>
                     </div>
 
-                    <p className="text-sm text-text-secondary mb-4 flex-grow">
+                    <p className="text-xs sm:text-sm text-text-secondary mb-3 sm:mb-4 flex-grow">
                       {project.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-1 mb-3">
+                    <div className="flex flex-wrap gap-1 mb-2 sm:mb-3">
                       {project.tags.map((tag, i) => (
                         <motion.div
                           key={i}

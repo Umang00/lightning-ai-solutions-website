@@ -43,26 +43,26 @@ export function ServicesOverview() {
   const { play } = useSound();
 
   return (
-    <section className="py-20 bg-primary-slate">
+    <section className="py-12 sm:py-16 lg:py-20 bg-primary-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight px-2">
             <span className="bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent">
               Our Services
             </span>
           </h2>
-          <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-text-secondary max-w-2xl mx-auto px-4">
             Comprehensive AI solutions tailored to your business needs
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -76,22 +76,22 @@ export function ServicesOverview() {
                 onHoverStart={() => play("hover")}
                 className={index === services.length - 1 && services.length % 3 === 1 ? "md:col-span-2 lg:col-span-1" : ""}
               >
-                <div className="group h-full p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 hover:shadow-xl hover:shadow-primary-blue/10 transition-all duration-300">
-                  <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary-blue/20 to-primary-purple/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Icon className="h-7 w-7 text-primary-blue" />
+                <div className="group h-full p-4 sm:p-6 lg:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 hover:shadow-xl hover:shadow-primary-blue/10 transition-all duration-300">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-gradient-to-br from-primary-blue/20 to-primary-purple/20 flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform">
+                    <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary-blue" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-text-primary mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-2 sm:mb-3">
                     {service.title}
                   </h3>
 
-                  <p className="text-text-secondary mb-6">
+                  <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-6">
                     {service.description}
                   </p>
 
-                  <ul className="space-y-2">
+                  <ul className="space-y-1.5 sm:space-y-2">
                     {service.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-center text-sm text-text-tertiary">
+                      <li key={i} className="flex items-center text-xs sm:text-sm text-text-tertiary">
                         <div className="w-1.5 h-1.5 rounded-full bg-primary-blue mr-2" />
                         {highlight}
                       </li>
