@@ -163,11 +163,6 @@ export const ALL_PROJECTS: Project[] = [
       "Became core product differentiator and strategic competitive advantage",
     ],
     technologies: ["Python", "PostgreSQL", "MBTI Framework", "Algorithm Design", "A/B Testing"],
-    testimonial: {
-      quote: "Umang's work on the MBTI matching system was transformative for Hunch. He didn't just build an algorithm—he fundamentally reshaped our product strategy. The 200% engagement increase validated the new direction. His ability to combine psychology, data science, and user experience design was exactly what we needed.",
-      author: "Sarah Chen",
-      role: "Head of Product, Hunch Dating App",
-    },
   },
   {
     id: "voice-agent",
@@ -210,11 +205,6 @@ export const ALL_PROJECTS: Project[] = [
       "Enabled data-driven decisions with 10x more user feedback",
     ],
     technologies: ["ElevenLabs", "OpenAI GPT-4", "Whisper API", "Twilio", "Python", "Retool", "PostgreSQL"],
-    testimonial: {
-      quote: "The voice agent system completely transformed our research process. We're now conducting more interviews in a day than we used to in a month, and the quality is surprisingly high. The insights generation is so fast that we can iterate on features weekly instead of monthly. This is the future of user research.",
-      author: "Rajesh Kumar",
-      role: "Product Lead, Hunch",
-    },
   },
   {
     id: "retool-dashboard",
@@ -257,11 +247,6 @@ export const ALL_PROJECTS: Project[] = [
       "534% ROI in Year 1 with 6-week payback period",
     ],
     technologies: ["Retool", "OpenAI GPT-4", "Instagram API", "Twitter API", "TikTok API", "PostgreSQL", "Google Analytics 4", "Python"],
-    testimonial: {
-      quote: "The Retool dashboard pays for itself every month in saved costs alone, but the real value is in how it changed our workflow. We're making faster, better decisions with unified data. The AI-powered insights helped us improve content performance by 25%. This is our most-used internal tool.",
-      author: "Emily Rodriguez",
-      role: "VP Marketing, Hunch",
-    },
   },
   {
     id: "chatbot",
@@ -304,11 +289,6 @@ export const ALL_PROJECTS: Project[] = [
       "Reduced first-week churn by helping users have successful conversations",
     ],
     technologies: ["OpenAI GPT-3.5", "LLM Fine-tuning", "MBTI Framework", "Python", "PostgreSQL", "React"],
-    testimonial: {
-      quote: "The fine-tuned chatbot became one of our most beloved features. Users tell us the AI 'gets' them and helps them start better conversations. The 100% session time increase speaks for itself. Umang's deep understanding of both AI and human psychology made this project a success.",
-      author: "Sarah Chen",
-      role: "Head of Product, Hunch",
-    },
   },
   {
     id: "poll-engine",
@@ -351,11 +331,6 @@ export const ALL_PROJECTS: Project[] = [
       "Used daily for 8+ months without issues, proving reliability",
     ],
     technologies: ["React", "TypeScript", "Redux", "Node.js", "Express", "PostgreSQL", "Redis", "Bull", "Socket.io", "AWS"],
-    testimonial: {
-      quote: "The Poll Promotion Engine transformed our workflow. What used to take 2 days and coordination across 3 teams now takes 5 minutes. Campaign quality improved because we can iterate quickly and test different approaches. This tool was used daily for 8+ months without issues.",
-      author: "Marketing Lead",
-      role: "Hunch",
-    },
   },
   {
     id: "web-onboarding",
@@ -398,10 +373,5 @@ export const ALL_PROJECTS: Project[] = [
       "Created compounding SEO asset driving organic traffic growth",
     ],
     technologies: ["React", "TypeScript", "Stripe", "Node.js", "PostgreSQL", "Email Marketing", "PDF Generation", "Google Analytics"],
-    testimonial: {
-      quote: "The web onboarding funnel created a completely new revenue stream we hadn't tapped into. $1,500 in the first month was just the beginning—it's been growing steadily. The seamless app transfer experience is brilliant, and the email nurture keeps users engaged.",
-      author: "Growth Team",
-      role: "Hunch",
-    },
   },
 ];

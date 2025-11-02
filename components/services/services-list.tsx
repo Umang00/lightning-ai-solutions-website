@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AnimatedBadge, AnimatedButtonLink } from "@/components/animations";
+import { useSound } from "@/lib/sounds/soundManager";
 
 const services = [
   {
@@ -88,6 +90,8 @@ const services = [
 ];
 
 export function ServicesList() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-slate">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -101,6 +105,7 @@ export function ServicesList() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
+              onHoverStart={() => play("hover")}
               className="scroll-mt-24 p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/30 hover:shadow-2xl hover:shadow-primary-blue/10 transition-all duration-300 group"
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
@@ -144,17 +149,17 @@ export function ServicesList() {
                       <h4 className="font-semibold text-text-primary mb-3 text-sm">Technologies:</h4>
                       <div className="flex flex-wrap gap-2">
                         {service.technologies.map((tech, i) => (
-                          <motion.span
+                          <motion.div
                             key={i}
-                            className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary hover:border-primary-blue/30 hover:text-text-secondary transition-all cursor-default"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.05 }}
-                            whileHover={{ scale: 1.1, y: -2 }}
                           >
-                            {tech}
-                          </motion.span>
+                            <AnimatedBadge variant="outline">
+                              {tech}
+                            </AnimatedBadge>
+                          </motion.div>
                         ))}
                       </div>
                     </div>
@@ -163,12 +168,15 @@ export function ServicesList() {
 
                 {/* CTA */}
                 <div className="md:flex-shrink-0">
-                  <a href="https://calendly.com/umangthakkar005/30min" target="_blank" rel="noopener noreferrer">
+                  <AnimatedButtonLink
+                    href="https://calendly.com/umangthakkar005/30min"
+                    external
+                  >
                     <Button variant="outline" className="group w-full md:w-auto">
                       Get Started
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                  </a>
+                  </AnimatedButtonLink>
                 </div>
               </div>
             </motion.div>

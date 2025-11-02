@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ALL_PROJECTS } from "@/lib/projects-data";
 import { ArrowRight, Star, Users, TrendingUp, MessageSquare, Zap } from "lucide-react";
+import { AnimatedButtonLink } from "@/components/animations";
+import { useSound } from "@/lib/sounds/soundManager";
 
 // Featured project is Astro AI (first in the list)
 const featuredProject = ALL_PROJECTS[0];
@@ -34,6 +35,8 @@ const features = [
 ];
 
 export function FeaturedProject() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -110,16 +113,18 @@ export function FeaturedProject() {
                 {features.map((feature, index) => {
                   const Icon = feature.icon;
                   return (
-                    <div
+                    <motion.div
                       key={index}
-                      className="p-4 rounded-lg bg-slate-800/50 border border-slate-700/50"
+                      className="p-4 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all cursor-pointer"
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      onHoverStart={() => play("hover")}
                     >
                       <Icon className="h-5 w-5 text-primary-blue mb-2" />
                       <div className="font-semibold text-text-primary text-sm mb-1">
                         {feature.title}
                       </div>
                       <div className="text-xs text-text-tertiary">{feature.description}</div>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -136,15 +141,17 @@ export function FeaturedProject() {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
         >
           {featuredProject.metrics.map((metric, index) => (
-            <div
+            <motion.div
               key={index}
-              className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 text-center"
+              className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 text-center cursor-pointer hover:border-primary-blue/50 transition-all"
+              whileHover={{ scale: 1.05, y: -3 }}
+              onHoverStart={() => play("pop")}
             >
               <div className="text-3xl font-bold bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent mb-1">
                 {metric.metric}
               </div>
               <div className="text-sm text-text-tertiary">{metric.label}</div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -156,7 +163,7 @@ export function FeaturedProject() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <Link href="/case-studies">
+          <AnimatedButtonLink href="/case-studies">
             <Button
               size="lg"
               variant="outline"
@@ -165,7 +172,7 @@ export function FeaturedProject() {
               View Full Case Study
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </AnimatedButtonLink>
         </motion.div>
       </div>
     </section>

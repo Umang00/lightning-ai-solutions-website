@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Target, Users, Zap, Shield, Lightbulb, Heart } from "lucide-react";
+import { AnimatedCardGridItem } from "@/components/animations/AnimatedCard";
+import { useSound } from "@/lib/sounds/soundManager";
 
 const values = [
   {
@@ -43,6 +45,8 @@ const values = [
 ];
 
 export function CoreValues() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,18 +67,34 @@ export function CoreValues() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.1 }
+            }
+          }}
+        >
           {values.map((value, index) => {
             const Icon = value.icon;
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 }
+                }}
               >
+                <AnimatedCardGridItem
+                  variant="lift"
+                  className="group h-full"
+                  onMouseEnter={() => play("hover")}
+                >
                 <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300">
                   <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary-blue/20 to-primary-purple/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <Icon className="h-7 w-7 text-primary-blue" />
@@ -84,10 +104,11 @@ export function CoreValues() {
 
                   <p className="text-text-secondary leading-relaxed">{value.description}</p>
                 </div>
+              </AnimatedCardGridItem>
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -2,8 +2,24 @@
 
 import { motion } from "framer-motion";
 import { TECH_STACK } from "@/lib/constants";
+import { useSound } from "@/lib/sounds/soundManager";
 
 export function TechStack() {
+  const { play } = useSound();
+
+  const TechItem = ({ tech, keyPrefix }: { tech: string; keyPrefix: string }) => (
+    <motion.div
+      key={`${keyPrefix}-${tech}`}
+      className="flex-shrink-0 px-6 py-4 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all cursor-pointer"
+      whileHover={{ scale: 1.1, y: -2 }}
+      onHoverStart={() => play("pop")}
+    >
+      <span className="text-text-secondary font-medium whitespace-nowrap">
+        {tech}
+      </span>
+    </motion.div>
+  );
+
   return (
     <section className="py-20 bg-primary-slate overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
@@ -47,25 +63,11 @@ export function TechStack() {
           >
             {/* First set */}
             {TECH_STACK.map((tech, index) => (
-              <div
-                key={`first-${index}`}
-                className="flex-shrink-0 px-6 py-4 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all"
-              >
-                <span className="text-text-secondary font-medium whitespace-nowrap">
-                  {tech}
-                </span>
-              </div>
+              <TechItem key={`first-${index}`} tech={tech} keyPrefix="first" />
             ))}
             {/* Duplicate for seamless loop */}
             {TECH_STACK.map((tech, index) => (
-              <div
-                key={`second-${index}`}
-                className="flex-shrink-0 px-6 py-4 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all"
-              >
-                <span className="text-text-secondary font-medium whitespace-nowrap">
-                  {tech}
-                </span>
-              </div>
+              <TechItem key={`second-${index}`} tech={tech} keyPrefix="second" />
             ))}
           </motion.div>
         </div>
@@ -88,25 +90,11 @@ export function TechStack() {
           >
             {/* First set */}
             {[...TECH_STACK].reverse().map((tech, index) => (
-              <div
-                key={`reverse-first-${index}`}
-                className="flex-shrink-0 px-6 py-4 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all"
-              >
-                <span className="text-text-secondary font-medium whitespace-nowrap">
-                  {tech}
-                </span>
-              </div>
+              <TechItem key={`reverse-first-${index}`} tech={tech} keyPrefix="reverse-first" />
             ))}
             {/* Duplicate for seamless loop */}
             {[...TECH_STACK].reverse().map((tech, index) => (
-              <div
-                key={`reverse-second-${index}`}
-                className="flex-shrink-0 px-6 py-4 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all"
-              >
-                <span className="text-text-secondary font-medium whitespace-nowrap">
-                  {tech}
-                </span>
-              </div>
+              <TechItem key={`reverse-second-${index}`} tech={tech} keyPrefix="reverse-second" />
             ))}
           </motion.div>
         </div>

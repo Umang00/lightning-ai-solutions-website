@@ -1,13 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 import { FOUNDER, COMPANY } from "@/lib/constants";
 import { LinkedinIcon, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AnimatedButtonLink, AnimatedStatCard } from "@/components/animations";
+import { useSound } from "@/lib/sounds/soundManager";
 
 export function FounderHighlight() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,11 +21,13 @@ export function FounderHighlight() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            whileHover={{ scale: 1.05 }}
+            onHoverStart={() => play("whoosh")}
+            className="relative cursor-pointer"
           >
             <div className="relative aspect-square max-w-md mx-auto lg:mx-0">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-blue to-primary-purple rounded-2xl opacity-20 blur-2xl" />
-              <div className="relative w-full h-full rounded-2xl border border-slate-700/50 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-blue to-primary-purple rounded-2xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity" />
+              <div className="relative w-full h-full rounded-2xl border border-slate-700/50 hover:border-primary-blue/50 overflow-hidden transition-all">
                 <Image
                   src="/founder.png"
                   alt={FOUNDER.name}
@@ -71,34 +76,37 @@ export function FounderHighlight() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/about">
+              <AnimatedButtonLink href="/about">
                 <Button variant="outline" className="group">
                   Learn More About Us
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </Link>
-              <a href={FOUNDER.linkedin} target="_blank" rel="noopener noreferrer">
+              </AnimatedButtonLink>
+              <AnimatedButtonLink href={FOUNDER.linkedin} external>
                 <Button variant="outline" className="gap-2">
                   <LinkedinIcon className="h-4 w-4" />
                   Connect on LinkedIn
                 </Button>
-              </a>
+              </AnimatedButtonLink>
             </div>
 
             {/* Key Metrics */}
             <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-slate-700/50">
-              <div>
-                <div className="text-2xl font-bold text-primary-blue mb-1">{FOUNDER.experience}</div>
-                <div className="text-sm text-text-tertiary">Years Building AI</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-primary-blue mb-1">7+</div>
-                <div className="text-sm text-text-tertiary">Products Launched</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-primary-blue mb-1">5M+</div>
-                <div className="text-sm text-text-tertiary">Users Impacted</div>
-              </div>
+              <AnimatedStatCard
+                value={4}
+                suffix="+"
+                label="Years Building AI"
+              />
+              <AnimatedStatCard
+                value={7}
+                suffix="+"
+                label="Products Launched"
+              />
+              <AnimatedStatCard
+                value={5}
+                suffix="M+"
+                label="Users Impacted"
+              />
             </div>
           </motion.div>
         </div>

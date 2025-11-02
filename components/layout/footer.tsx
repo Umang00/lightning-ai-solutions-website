@@ -1,6 +1,9 @@
-import Link from "next/link";
+"use client";
+
 import { COMPANY, FOOTER_LINKS, SOCIAL_LINKS } from "@/lib/constants";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
+import { SoundLink } from "@/components/animations";
 
 export function Footer() {
   return (
@@ -11,15 +14,21 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-text-primary mb-4">Company</h3>
             <ul className="space-y-2">
-              {FOOTER_LINKS.company.map((link) => (
-                <li key={link.href}>
-                  <Link
+              {FOOTER_LINKS.company.map((link, index) => (
+                <motion.li
+                  key={link.href}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <SoundLink
                     href={link.href}
                     className="text-text-secondary hover:text-primary-blue transition-colors text-sm"
                   >
                     {link.label}
-                  </Link>
-                </li>
+                  </SoundLink>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -28,15 +37,21 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-text-primary mb-4">Services</h3>
             <ul className="space-y-2">
-              {FOOTER_LINKS.services.map((link) => (
-                <li key={link.href}>
-                  <Link
+              {FOOTER_LINKS.services.map((link, index) => (
+                <motion.li
+                  key={link.href}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <SoundLink
                     href={link.href}
                     className="text-text-secondary hover:text-primary-blue transition-colors text-sm"
                   >
                     {link.label}
-                  </Link>
-                </li>
+                  </SoundLink>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -45,15 +60,21 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-text-primary mb-4">Legal</h3>
             <ul className="space-y-2">
-              {FOOTER_LINKS.legal.map((link) => (
-                <li key={link.href}>
-                  <Link
+              {FOOTER_LINKS.legal.map((link, index) => (
+                <motion.li
+                  key={link.href}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05 }}
+                >
+                  <SoundLink
                     href={link.href}
                     className="text-text-secondary hover:text-primary-blue transition-colors text-sm"
                   >
                     {link.label}
-                  </Link>
-                </li>
+                  </SoundLink>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -62,30 +83,47 @@ export function Footer() {
           <div>
             <h3 className="font-semibold text-text-primary mb-4">Connect</h3>
             <ul className="space-y-3">
-              <li>
-                <a
+              <motion.li
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0 }}
+              >
+                <SoundLink
                   href={SOCIAL_LINKS.email}
+                  external
                   className="text-text-secondary hover:text-primary-blue transition-colors text-sm flex items-center gap-2"
                 >
                   <Mail className="h-4 w-4" />
                   {COMPANY.email}
-                </a>
-              </li>
-              <li>
-                <a
+                </SoundLink>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.05 }}
+              >
+                <SoundLink
                   href={SOCIAL_LINKS.phone}
+                  external
                   className="text-text-secondary hover:text-primary-blue transition-colors text-sm flex items-center gap-2"
                 >
                   <Phone className="h-4 w-4" />
                   {COMPANY.phone}
-                </a>
-              </li>
-              <li>
+                </SoundLink>
+              </motion.li>
+              <motion.li
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+              >
                 <p className="text-text-secondary text-sm flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
                   {COMPANY.location}
                 </p>
-              </li>
+              </motion.li>
             </ul>
           </div>
         </div>

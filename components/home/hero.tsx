@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import { AnimatedStatCard } from "@/components/animations/AnimatedCounter";
+import { AnimatedButtonLink } from "@/components/animations";
 
 export function Hero() {
   return (
@@ -81,7 +83,10 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
         >
-          <a href="https://calendly.com/umangthakkar005/30min" target="_blank" rel="noopener noreferrer">
+          <AnimatedButtonLink
+            href="https://calendly.com/umangthakkar005/30min"
+            external
+          >
             <Button
               size="lg"
               className="relative bg-gradient-to-r from-primary-blue to-primary-purple hover:opacity-90 transition-all group overflow-hidden"
@@ -97,8 +102,8 @@ export function Hero() {
                 transition={{ duration: 0.3 }}
               />
             </Button>
-          </a>
-          <Link href="/projects">
+          </AnimatedButtonLink>
+          <AnimatedButtonLink href="/projects">
             <Button size="lg" variant="outline" className="group">
               View Our Work
               <motion.span
@@ -109,30 +114,36 @@ export function Hero() {
                 →
               </motion.span>
             </Button>
-          </Link>
+          </AnimatedButtonLink>
         </motion.div>
 
         {/* Stats Preview */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-        >
-          {[
-            { value: "7+", label: "AI Products Launched" },
-            { value: "200%", label: "Avg. Engagement Boost" },
-            { value: "70%", label: "Cost Reduction" },
-            { value: "24/7", label: "AI Support" },
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-text-tertiary">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+          <AnimatedStatCard
+            value={7}
+            suffix="+"
+            label="AI Products Launched"
+            className="text-center"
+          />
+          <AnimatedStatCard
+            value={200}
+            suffix="%"
+            label="Avg. Engagement Boost"
+            className="text-center"
+          />
+          <AnimatedStatCard
+            value={70}
+            suffix="%"
+            label="Cost Reduction"
+            className="text-center"
+          />
+          <AnimatedStatCard
+            value={24}
+            suffix="/7"
+            label="AI Support"
+            className="text-center"
+          />
+        </div>
       </div>
     </section>
   );

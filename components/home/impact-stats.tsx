@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { TrendingUp, Users, Zap, DollarSign } from "lucide-react";
+import { useSound } from "@/lib/sounds/soundManager";
 
 interface Stat {
   icon: typeof TrendingUp;
@@ -77,6 +78,8 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 }
 
 export function ImpactStats() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,13 +110,21 @@ export function ImpactStats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative group"
+                whileHover={{ scale: 1.05, y: -5 }}
+                onHoverStart={() => play("pop")}
+                className="relative group cursor-pointer"
               >
-                <div className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 h-full">
+                <div className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 h-full hover:shadow-xl hover:shadow-primary-blue/20">
                   <div className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-blue/20 to-primary-purple/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ type: "spring", stiffness: 260, damping: 20, delay: index * 0.1 }}
+                      className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary-blue/20 to-primary-purple/20 flex items-center justify-center mb-4"
+                    >
                       <Icon className="h-6 w-6 text-primary-blue" />
-                    </div>
+                    </motion.div>
                     <div className="text-4xl font-bold mb-2 bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent">
                       <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                     </div>

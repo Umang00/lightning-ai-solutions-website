@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { AnimatedButtonLink, AnimatedStatCard } from "@/components/animations";
 
 export function CTASection() {
   return (
@@ -43,12 +43,27 @@ export function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-700/50 border border-primary-blue/30 mb-8">
-            <Sparkles className="h-4 w-4 text-primary-yellow" />
+          <motion.div
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-700/50 border border-primary-blue/30 mb-8"
+            whileHover={{ scale: 1.05 }}
+          >
+            <motion.div
+              animate={{
+                rotate: [0, 10, -10, 0],
+                scale: [1, 1.2, 1],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatDelay: 3,
+              }}
+            >
+              <Sparkles className="h-4 w-4 text-primary-yellow" />
+            </motion.div>
             <span className="text-sm text-text-secondary">
               Ready to Transform Your Business?
             </span>
-          </div>
+          </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="bg-gradient-to-r from-primary-blue via-primary-purple to-primary-blue bg-clip-text text-transparent">
@@ -62,7 +77,7 @@ export function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://calendly.com/umangthakkar005/30min" target="_blank" rel="noopener noreferrer">
+            <AnimatedButtonLink href="https://calendly.com/umangthakkar005/30min" external>
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-primary-blue to-primary-purple hover:opacity-90 transition-opacity group text-lg px-8 py-6"
@@ -70,33 +85,41 @@ export function CTASection() {
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </a>
-            <Link href="/case-studies">
+            </AnimatedButtonLink>
+            <AnimatedButtonLink href="/case-studies">
               <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                 View Case Studies
               </Button>
-            </Link>
+            </AnimatedButtonLink>
           </div>
 
           {/* Trust Indicators */}
           <div className="mt-16 pt-12 border-t border-slate-700/50">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">7+</div>
-                <div className="text-sm text-text-tertiary">AI Products</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">4+</div>
-                <div className="text-sm text-text-tertiary">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">5M+</div>
-                <div className="text-sm text-text-tertiary">Users Served</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary-blue mb-2">100%</div>
-                <div className="text-sm text-text-tertiary">Client Satisfaction</div>
-              </div>
+              <AnimatedStatCard
+                value={7}
+                suffix="+"
+                label="AI Products"
+                className="text-center"
+              />
+              <AnimatedStatCard
+                value={4}
+                suffix="+"
+                label="Years Experience"
+                className="text-center"
+              />
+              <AnimatedStatCard
+                value={5}
+                suffix="M+"
+                label="Users Served"
+                className="text-center"
+              />
+              <AnimatedStatCard
+                value={100}
+                suffix="%"
+                label="Client Satisfaction"
+                className="text-center"
+              />
             </div>
           </div>
         </motion.div>

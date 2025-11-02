@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useSound } from "@/lib/sounds/soundManager";
 
 const faqs = [
   {
@@ -42,6 +43,8 @@ const faqs = [
 ];
 
 export function FAQ() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-dark">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,20 +73,28 @@ export function FAQ() {
         >
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem
+              <motion.div
                 key={index}
-                value={`item-${index}`}
-                className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <AccordionTrigger className="text-left hover:no-underline">
-                  <span className="text-lg font-semibold text-text-primary pr-4">
-                    {faq.question}
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="text-text-secondary pt-4">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
+                <AccordionItem
+                  value={`item-${index}`}
+                  className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all"
+                  onClick={() => play("click")}
+                >
+                  <AccordionTrigger className="text-left hover:no-underline">
+                    <span className="text-lg font-semibold text-text-primary pr-4">
+                      {faq.question}
+                    </span>
+                  </AccordionTrigger>
+                  <AccordionContent className="text-text-secondary pt-4">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </motion.div>
             ))}
           </Accordion>
         </motion.div>

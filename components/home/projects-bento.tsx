@@ -4,7 +4,8 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { AnimatedBadge, AnimatedButtonLink } from "@/components/animations";
+import { useSound } from "@/lib/sounds/soundManager";
 
 const projects = [
   {
@@ -66,6 +67,8 @@ const projects = [
 ];
 
 export function ProjectsBento() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,17 +98,24 @@ export function ProjectsBento() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: (index + 1) * 0.1 }}
+              whileHover={{ scale: 1.05, y: -5 }}
+              onHoverStart={() => play("hover")}
             >
               <Link href={`/projects#${project.id}`} className="block group h-full">
-                <div className="relative h-full min-h-[200px] p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 overflow-hidden">
+                <div className="relative h-full min-h-[200px] p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 overflow-hidden hover:shadow-xl hover:shadow-primary-blue/20">
                   <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-5 group-hover:opacity-10 transition-opacity`} />
-                  
+
                   <div className="relative z-10 flex flex-col h-full">
                     <div className="flex items-start justify-between mb-3">
                       <h3 className="text-xl font-bold text-text-primary">
                         {project.title}
                       </h3>
-                      <ArrowRight className="h-4 w-4 text-primary-blue opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        whileHover={{ opacity: 1, x: 3 }}
+                      >
+                        <ArrowRight className="h-4 w-4 text-primary-blue flex-shrink-0" />
+                      </motion.div>
                     </div>
 
                     <p className="text-sm text-text-secondary mb-4 flex-grow">
@@ -114,9 +124,17 @@ export function ProjectsBento() {
 
                     <div className="flex flex-wrap gap-1 mb-3">
                       {project.tags.map((tag, i) => (
-                        <Badge key={i} variant="outline" className="text-xs border-slate-600">
-                          {tag}
-                        </Badge>
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.1 + i * 0.05 }}
+                        >
+                          <AnimatedBadge variant="outline" className="text-xs">
+                            {tag}
+                          </AnimatedBadge>
+                        </motion.div>
                       ))}
                     </div>
 
@@ -137,12 +155,12 @@ export function ProjectsBento() {
           transition={{ duration: 0.8 }}
           className="text-center mt-12"
         >
-          <Link href="/projects">
+          <AnimatedButtonLink href="/projects">
             <Button variant="outline" size="lg" className="group">
               View Projects Details
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </AnimatedButtonLink>
         </motion.div>
       </div>
     </section>

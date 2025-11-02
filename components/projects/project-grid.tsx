@@ -5,11 +5,14 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { ALL_PROJECTS } from "@/lib/projects-data";
 import { ArrowRight } from "lucide-react";
+import { useSound } from "@/lib/sounds/soundManager";
 
 // Skip first project (Astro AI) as it's featured separately
 const projects = ALL_PROJECTS.slice(1);
 
 export function ProjectGrid() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,6 +43,9 @@ export function ProjectGrid() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ y: -5 }}
+                  onHoverStart={() => play("hover")}
+                  onClick={() => play("click")}
                   className="group h-full"
                 >
                   <div className="h-full p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300 relative overflow-hidden hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary-blue/10">

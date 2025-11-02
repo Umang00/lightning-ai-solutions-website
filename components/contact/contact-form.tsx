@@ -9,6 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Loader2 } from "lucide-react";
+import { ScrollReveal } from "@/components/animations/ScrollReveal";
+import { useSound } from "@/lib/sounds/soundManager";
 import {
   Form,
   FormControl,
@@ -39,6 +41,7 @@ type FormData = z.infer<typeof formSchema>;
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const { play } = useSound();
 
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -63,6 +66,7 @@ export function ContactForm() {
       });
 
       if (response.ok) {
+        play("success");
         toast({
           title: "Message sent successfully!",
           description: "We'll get back to you within 24 hours.",
@@ -72,6 +76,7 @@ export function ContactForm() {
         throw new Error("Failed to send message");
       }
     } catch (error) {
+      play("error");
       toast({
         title: "Something went wrong",
         description: "Please try again or email us directly at umang@lightningaisolutions.in",
@@ -83,7 +88,8 @@ export function ContactForm() {
   }
 
   return (
-    <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50">
+    <ScrollReveal variant="fadeInUp">
+      <div className="p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50">
       <h2 className="text-2xl font-bold text-text-primary mb-2">Send us a message</h2>
       <p className="text-text-secondary mb-6">
         Fill out the form below and we'll get back to you within 24 hours
@@ -218,6 +224,7 @@ export function ContactForm() {
           </Button>
         </form>
       </Form>
-    </div>
+      </div>
+    </ScrollReveal>
   );
 }

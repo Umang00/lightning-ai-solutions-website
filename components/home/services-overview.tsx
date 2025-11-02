@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Brain, Mic, Workflow, LineChart, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AnimatedButtonLink } from "@/components/animations";
+import { useSound } from "@/lib/sounds/soundManager";
 
 const services = [
   {
@@ -39,6 +40,8 @@ const services = [
 ];
 
 export function ServicesOverview() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,9 +72,11 @@ export function ServicesOverview() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                onHoverStart={() => play("hover")}
                 className={index === services.length - 1 && services.length % 3 === 1 ? "md:col-span-2 lg:col-span-1" : ""}
               >
-                <div className="group h-full p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all duration-300">
+                <div className="group h-full p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 hover:shadow-xl hover:shadow-primary-blue/10 transition-all duration-300">
                   <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary-blue/20 to-primary-purple/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <Icon className="h-7 w-7 text-primary-blue" />
                   </div>
@@ -105,12 +110,12 @@ export function ServicesOverview() {
           transition={{ duration: 0.8 }}
           className="text-center mt-12"
         >
-          <Link href="/services">
+          <AnimatedButtonLink href="/services">
             <Button size="lg" className="bg-gradient-to-r from-primary-blue to-primary-purple hover:opacity-90 transition-opacity">
               Explore All Services
             </Button>
-          </Link>
-        </motion.div>
+          </AnimatedButtonLink>
+          </motion.div>
       </div>
     </section>
   );

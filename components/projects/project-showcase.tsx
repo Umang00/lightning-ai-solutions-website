@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Project } from "@/lib/projects-data";
 import { ArrowRight } from "lucide-react";
+import { AnimatedBadge, AnimatedButtonLink } from "@/components/animations";
+import { useSound } from "@/lib/sounds/soundManager";
 
 interface ProjectShowcaseProps {
   project: Project;
@@ -14,6 +14,7 @@ interface ProjectShowcaseProps {
 
 export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
   const isEven = index % 2 === 0;
+  const { play } = useSound();
 
   return (
     <section className={`py-20 ${isEven ? 'bg-primary-slate' : 'bg-primary-dark'}`}>
@@ -53,9 +54,15 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
               <p className="text-text-secondary mb-4">{project.solution}</p>
               <div className="flex flex-wrap gap-2">
                 {project.technologies.map((tech, i) => (
-                  <Badge key={i} variant="outline">
-                    {tech}
-                  </Badge>
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05 }}
+                  >
+                    <AnimatedBadge variant="outline">{tech}</AnimatedBadge>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -67,9 +74,15 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
                   const [title, ...descParts] = feature.split(' - ');
                   const description = descParts.join(' - ');
                   return (
-                    <div
+                    <motion.div
                       key={i}
-                      className="p-4 rounded-lg bg-slate-800/50 border border-slate-700/50"
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: i * 0.1 }}
+                      whileHover={{ scale: 1.02, x: 5 }}
+                      onHoverStart={() => play("hover")}
+                      className="p-4 rounded-lg bg-slate-800/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all cursor-pointer"
                     >
                       <div className="font-semibold text-text-primary text-sm mb-1">
                         {title}
@@ -77,7 +90,7 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
                       {description && (
                         <div className="text-xs text-text-tertiary">{description}</div>
                       )}
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -94,15 +107,21 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
           className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8"
         >
           {project.metrics.map((metric, i) => (
-            <div
+            <motion.div
               key={i}
-              className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 text-center"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              whileHover={{ scale: 1.05, y: -3 }}
+              onHoverStart={() => play("pop")}
+              className="p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all text-center cursor-pointer"
             >
               <div className="text-3xl font-bold bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent mb-1">
                 {metric.metric}
               </div>
               <div className="text-sm text-text-tertiary">{metric.label}</div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -114,7 +133,7 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <Link href={`/case-studies#${project.id}`}>
+          <AnimatedButtonLink href={`/case-studies#${project.id}`}>
             <Button
               size="lg"
               variant="outline"
@@ -123,7 +142,7 @@ export function ProjectShowcase({ project, index }: ProjectShowcaseProps) {
               View Full Case Study
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-          </Link>
+          </AnimatedButtonLink>
         </motion.div>
       </div>
     </section>

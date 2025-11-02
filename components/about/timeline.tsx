@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { useSound } from "@/lib/sounds/soundManager";
 
 const journeyData = {
   year: "2025",
@@ -25,6 +26,8 @@ const journeyData = {
 };
 
 export function Timeline() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +54,9 @@ export function Timeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="p-8 md:p-10 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all"
+            whileHover={{ scale: 1.02, y: -3 }}
+            onHoverStart={() => play("hover")}
+            className="p-8 md:p-10 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all cursor-pointer hover:shadow-xl hover:shadow-primary-blue/10"
           >
             {/* Year and Title */}
             <div className="text-center mb-8">
@@ -87,7 +92,14 @@ export function Timeline() {
                     transition={{ duration: 0.5, delay: 0.3 + index * 0.05 }}
                     className="flex items-start gap-3 text-text-secondary"
                   >
-                    <Check className="h-5 w-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10, delay: 0.3 + index * 0.05 }}
+                    >
+                      <Check className="h-5 w-5 text-primary-blue flex-shrink-0 mt-0.5" />
+                    </motion.div>
                     <span>{item}</span>
                   </motion.li>
                 ))}
@@ -114,7 +126,14 @@ export function Timeline() {
                     transition={{ duration: 0.5, delay: 0.7 + index * 0.05 }}
                     className="flex items-start gap-3 text-text-secondary"
                   >
-                    <Check className="h-5 w-5 text-primary-purple flex-shrink-0 mt-0.5" />
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ type: "spring", stiffness: 400, damping: 10, delay: 0.7 + index * 0.05 }}
+                    >
+                      <Check className="h-5 w-5 text-primary-purple flex-shrink-0 mt-0.5" />
+                    </motion.div>
                     <span>{item}</span>
                   </motion.li>
                 ))}

@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Check, ChevronDown, ChevronUp, Quote } from "lucide-react";
 import { Project } from "@/lib/projects-data";
+import { useSound } from "@/lib/sounds/soundManager";
 
 interface ExpandableCaseStudyProps {
   project: Project;
@@ -15,6 +16,7 @@ interface ExpandableCaseStudyProps {
 export function ExpandableCaseStudy({ project, index }: ExpandableCaseStudyProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const Icon = project.icon;
+  const { play } = useSound();
 
   return (
     <motion.div
@@ -23,9 +25,11 @@ export function ExpandableCaseStudy({ project, index }: ExpandableCaseStudyProps
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
+      whileHover={{ scale: 1.01 }}
+      onHoverStart={() => play("hover")}
       className="relative scroll-mt-20"
     >
-      <div className="p-8 md:p-12 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/30 transition-all">
+      <div className="p-8 md:p-12 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/30 transition-all cursor-pointer">
         {/* Header */}
         <div className="flex items-start gap-4 mb-6">
           <div className={`w-16 h-16 rounded-lg bg-gradient-to-br ${project.gradient} opacity-20 flex items-center justify-center flex-shrink-0`}>
@@ -62,17 +66,23 @@ export function ExpandableCaseStudy({ project, index }: ExpandableCaseStudyProps
             <p className="text-text-secondary line-clamp-3 mb-4">{project.solution}</p>
             <div className="flex flex-wrap gap-2">
               {project.technologies.slice(0, 5).map((tech, i) => (
-                <span
+                <motion.span
                   key={i}
-                  className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary"
+                  className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary hover:border-primary-blue/30 transition-all cursor-default"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  onMouseEnter={() => play("pop")}
                 >
                   {tech}
-                </span>
+                </motion.span>
               ))}
               {project.technologies.length > 5 && (
-                <span className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary">
+                <motion.span
+                  className="px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700/50 text-xs text-text-tertiary hover:border-primary-blue/30 transition-all cursor-default"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  onMouseEnter={() => play("pop")}
+                >
                   +{project.technologies.length - 5} more
-                </span>
+                </motion.span>
               )}
             </div>
           </div>
@@ -80,15 +90,17 @@ export function ExpandableCaseStudy({ project, index }: ExpandableCaseStudyProps
           {/* Results Grid - Always visible */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {project.metrics.map((result, i) => (
-              <div
+              <motion.div
                 key={i}
-                className="p-4 rounded-lg bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-slate-700/50 text-center"
+                className="p-4 rounded-lg bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-slate-700/50 text-center cursor-pointer hover:border-primary-blue/50 transition-all"
+                whileHover={{ scale: 1.05, y: -3 }}
+                onHoverStart={() => play("pop")}
               >
                 <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary-blue to-primary-purple bg-clip-text text-transparent mb-1">
                   {result.metric}
                 </div>
                 <div className="text-xs text-text-tertiary">{result.label}</div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
@@ -195,11 +207,18 @@ export function ExpandableCaseStudy({ project, index }: ExpandableCaseStudyProps
 
           {/* Expand/Collapse Button */}
           <div className="flex justify-center pt-4">
-            <Button
-              variant="outline"
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="group"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setIsExpanded(!isExpanded);
+                  play("click");
+                }}
+                className="group"
+              >
               {isExpanded ? (
                 <>
                   Show Less
@@ -212,6 +231,7 @@ export function ExpandableCaseStudy({ project, index }: ExpandableCaseStudyProps
                 </>
               )}
             </Button>
+            </motion.div>
           </div>
         </div>
       </div>

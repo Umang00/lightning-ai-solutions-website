@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { COMPANY } from "@/lib/constants";
+import { useSound } from "@/lib/sounds/soundManager";
 
 export function CompanyStory() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-slate">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,8 +75,10 @@ export function CompanyStory() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50"
+          transition={{ duration: 0.8, delay: 0.5 }}
+          whileHover={{ scale: 1.02, y: -3 }}
+          onHoverStart={() => play("hover")}
+          className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all cursor-pointer hover:shadow-xl hover:shadow-primary-blue/10"
         >
           <h3 className="text-xl font-bold text-text-primary mb-4">Our Mission</h3>
           <p className="text-text-secondary text-lg">

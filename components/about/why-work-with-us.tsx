@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { AnimatedButtonLink } from "@/components/animations";
+import { useSound } from "@/lib/sounds/soundManager";
 
 const reasons = [
   {
@@ -33,6 +34,8 @@ const reasons = [
 ];
 
 export function WhyWorkWithUs() {
+  const { play } = useSound();
+
   return (
     <section className="py-20 bg-primary-slate">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,27 +58,39 @@ export function WhyWorkWithUs() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-3 text-text-secondary">
+              <motion.div
+                className="flex items-center gap-3 text-text-secondary cursor-pointer"
+                whileHover={{ x: 5, scale: 1.02 }}
+                onHoverStart={() => play("pop")}
+              >
                 <div className="w-12 h-12 rounded-lg bg-primary-blue/10 flex items-center justify-center flex-shrink-0">
                   <span className="text-2xl font-bold text-primary-blue">7+</span>
                 </div>
                 <span>Products shipped and scaled in production</span>
-              </div>
-              <div className="flex items-center gap-3 text-text-secondary">
+              </motion.div>
+              <motion.div
+                className="flex items-center gap-3 text-text-secondary cursor-pointer"
+                whileHover={{ x: 5, scale: 1.02 }}
+                onHoverStart={() => play("pop")}
+              >
                 <div className="w-12 h-12 rounded-lg bg-primary-purple/10 flex items-center justify-center flex-shrink-0">
                   <span className="text-2xl font-bold text-primary-purple">4+</span>
                 </div>
                 <span>Years of hands-on AI product development</span>
-              </div>
-              <div className="flex items-center gap-3 text-text-secondary">
+              </motion.div>
+              <motion.div
+                className="flex items-center gap-3 text-text-secondary cursor-pointer"
+                whileHover={{ x: 5, scale: 1.02 }}
+                onHoverStart={() => play("pop")}
+              >
                 <div className="w-12 h-12 rounded-lg bg-primary-yellow/10 flex items-center justify-center flex-shrink-0">
                   <span className="text-2xl font-bold text-primary-yellow">5M+</span>
                 </div>
                 <span>Users benefiting from our AI solutions daily</span>
-              </div>
+              </motion.div>
             </div>
 
-            <Link href="/contact">
+            <AnimatedButtonLink href="/contact">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-primary-blue to-primary-purple hover:opacity-90 transition-opacity group"
@@ -83,7 +98,7 @@ export function WhyWorkWithUs() {
                 Let's Build Together
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </AnimatedButtonLink>
           </motion.div>
 
           {/* Right: Reasons Grid */}
@@ -101,7 +116,9 @@ export function WhyWorkWithUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex gap-4 p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all"
+                whileHover={{ scale: 1.02, x: 5 }}
+                onHoverStart={() => play("hover")}
+                className="flex gap-4 p-6 rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-primary-blue/50 transition-all cursor-pointer"
               >
                 <CheckCircle2 className="h-6 w-6 text-primary-blue flex-shrink-0 mt-1" />
                 <div>
