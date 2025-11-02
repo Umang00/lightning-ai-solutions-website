@@ -21,9 +21,12 @@ Message:
 ${message}
     `;
 
+    const mailFrom = process.env.MAIL_FROM || "Lightning AI Solutions <onboarding@resend.dev>";
+    const mailTo = process.env.MAIL_TO || "umangthakkar005@gmail.com";
+
     await resend.emails.send({
-      from: "Lightning AI Solutions <onboarding@resend.dev>",
-      to: "umangthakkar005@gmail.com",
+      from: mailFrom,
+      to: mailTo,
       subject: `New Contact Form: ${name} - ${service}`,
       text: emailContent,
     });
