@@ -40,8 +40,16 @@ The project utilizes Next.js 14 (App Router) with TypeScript and Tailwind CSS fo
 
 - **Email Service:** Resend API for contact form submissions.
 - **Deployment Platform:** Vercel (configured for autoscale).
-- **Domain:** `lightningai.solutions` (to be configured post-deployment).
+- **Domain:** `lightningaisolutions.in` (Hostinger DNS).
 - **UI Components:** `shadcn/ui`.
 - **Animation Library:** Framer Motion.
 - **Icons:** Lucide React.
 - **Form Handling:** React Hook Form with Zod validation.
+
+## Recent Changes (Nov 3, 2025)
+
+- **Documentation:** Added comprehensive README.md for GitHub repository with installation, deployment, and contribution guidelines.
+- **License:** Added MIT License file.
+- **Environment Variables:** Updated contact API to use MAIL_FROM and MAIL_TO environment variables for flexible email configuration.
+- **Vercel Deployment:** Configured for production deployment with environment variable documentation in .env.example.
+- **Security:** Verified .env.local is in .gitignore to prevent secrets from being committed.
