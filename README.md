@@ -107,8 +107,8 @@ All legal pages include comprehensive B2B/B2C coverage, GDPR/CCPA compliance, an
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Umang00/lightning-ai-solutions.git
-   cd lightning-ai-solutions
+   git clone https://github.com/Umang00/lightning-ai-solutions-website.git
+   cd lightning-ai-solutions-website
    ```
 
 2. **Install dependencies**
@@ -382,6 +382,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ⚡ by Lightning AI Solutions**
 
-[Report Bug](https://github.com/Umang00/lightning-ai-solutions/issues) · [Request Feature](https://github.com/Umang00/lightning-ai-solutions/issues)
+[Report Bug](https://github.com/Umang00/lightning-ai-solutions-website/issues) · [Request Feature](https://github.com/Umang00/lightning-ai-solutions-website/issues)
 
 </div>
