@@ -107,7 +107,7 @@ All legal pages include comprehensive B2B/B2C coverage, GDPR/CCPA compliance, an
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/lightning-ai-solutions.git
+   git clone https://github.com/Umang00/lightning-ai-solutions.git
    cd lightning-ai-solutions
    ```
 
@@ -363,8 +363,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Lightning AI Solutions**
 
 - Website: [lightningaisolutions.in](https://lightningaisolutions.in)
-- Email: contact@lightningaisolutions.in
-- GitHub: [@yourusername](https://github.com/yourusername)
+- Email: umang@lightningaisolution.in
+- GitHub: [@Umang00](https://github.com/Umang00)
 
 ---
 
@@ -382,6 +382,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ⚡ by Lightning AI Solutions**
 
-[Report Bug](https://github.com/yourusername/lightning-ai-solutions/issues) · [Request Feature](https://github.com/yourusername/lightning-ai-solutions/issues)
+[Report Bug](https://github.com/Umang00/lightning-ai-solutions/issues) · [Request Feature](https://github.com/Umang00/lightning-ai-solutions/issues)
 
 </div>
