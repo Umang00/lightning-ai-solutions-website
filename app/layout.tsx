@@ -9,7 +9,7 @@ import { CookieConsent } from "@/components/layout/cookie-consent";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lightningai.solutions"),
+  metadataBase: new URL("https://www.lightningaisolutions.in"),
   title: {
     default: "Lightning AI Solutions - AI Product Development & Automation",
     template: "%s | Lightning AI Solutions",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://lightningai.solutions",
+    url: "https://www.lightningaisolutions.in",
     siteName: "Lightning AI Solutions",
     title: "Lightning AI Solutions - AI Product Development & Automation",
     description:
@@ -84,8 +84,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Lightning AI Solutions",
-              url: "https://lightningai.solutions",
-              logo: "https://lightningai.solutions/logo.png",
+              url: "https://www.lightningaisolutions.in",
+              logo: "https://www.lightningaisolutions.in/logo.png",
               description:
                 "AI product development, LLM fine-tuning, voice AI agents, intelligent automation, and AI analytics services.",
               address: {

@@ -1,14 +1,29 @@
 # robots.txt for Lightning AI Solutions
-# https://lightningai.solutions
+# https://www.lightningaisolutions.in
 
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://lightningai.solutions/sitemap.xml
+# Sitemap
+Sitemap: https://www.lightningaisolutions.in/sitemap.xml
 
-# Crawl-delay for specific bots (optional)
+# Explicitly allow major AI crawlers
 User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
 Allow: /
 
 User-agent: Google-Extended

@@ -363,7 +363,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Lightning AI Solutions**
 
 - Website: [lightningaisolutions.in](https://lightningaisolutions.in)
-- Email: umang@lightningaisolution.in
+- Email: umang@lightningaisolutions.in
 - GitHub: [@Umang00](https://github.com/Umang00)
 
 ---
