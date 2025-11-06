@@ -25,7 +25,7 @@ The project utilizes Next.js 14 (App Router) with TypeScript and Tailwind CSS fo
 - **Core Layout:** Includes a Header, Footer, Mobile menu, and Cookie banner.
 - **Pages:** Consists of 6 main pages (Homepage, About Us, Projects, Services, Case Studies, Contact) and 4 legal pages (Privacy Policy, Terms of Service, Cookie Policy, Refund Policy) crucial for WhatsApp API compliance.
 - **Legal Pages (Updated Oct 30, 2025):** All 4 legal policies updated with comprehensive dual-purpose B2B/B2C content covering client services and Astro AI subscriptions, including international taxation, GDPR/CCPA compliance, WhatsApp Business API requirements, detailed refund policies, and cookie consent management.
-- **SEO & Optimization:** Comprehensive metadata (Open Graph, Twitter Card, JSON-LD), dynamic sitemap generation, `robots.txt` configuration, and page-level metadata across all routes.
+- **SEO & Optimization:** Comprehensive metadata (Open Graph, Twitter Card, JSON-LD schemas), dynamic sitemap with 17 pages, AI crawler-optimized `robots.txt`, RSS feed at `/feed.xml`, machine-readable `/ai` page, reusable SEO components (`StructuredData`, `MetaTags`), and 1200x630px OG image for social sharing.
 - **Key Decisions:**
     - Usage of 80% pre-built `shadcn/ui` components.
     - Dark mode only (no light mode toggle).
@@ -46,8 +46,21 @@ The project utilizes Next.js 14 (App Router) with TypeScript and Tailwind CSS fo
 - **Icons:** Lucide React.
 - **Form Handling:** React Hook Form with Zod validation.
 
-## Recent Changes (Nov 3, 2025)
+## Recent Changes
 
+### November 6, 2025 - SEO & AI Crawler Optimization
+- **SEO Infrastructure:** Created reusable `StructuredData` component (JSON-LD schemas) and `MetaTags` helper for consistent metadata across all pages.
+- **AI Crawler Support:** Added `/ai` machine-readable page with JSON company overview, technical stack, and citation format for AI search engines.
+- **Enhanced robots.txt:** Explicit permissions for all major AI crawlers (GPTBot, ClaudeBot, PerplexityBot, CCBot, Bingbot, Googlebot, Google-Extended).
+- **RSS Feed:** Auto-generated feed at `/feed.xml` for content distribution and crawler discovery.
+- **Custom 404:** Branded not-found page with navigation and gradient design.
+- **Vercel Config:** Created `vercel.json` with proper headers, caching, and HTTP→HTTPS redirects.
+- **OG Image:** Added 1200x630px social preview image with lightning logo and gradient branding.
+- **Domain Corrections:** Fixed all references from `lightningai.solutions` to `www.lightningaisolutions.in`.
+- **Email Corrections:** Fixed all instances from `umang@lightningaisolution.in` to `umang@lightningaisolutions.in`.
+- **Build Status:** ✅ Production build successful with 17 pages (was 15).
+
+### November 3, 2025 - Documentation & Deployment
 - **Documentation:** Added comprehensive README.md for GitHub repository with installation, deployment, and contribution guidelines.
 - **License:** Added MIT License file.
 - **Environment Variables:** Updated contact API to use MAIL_FROM and MAIL_TO environment variables for flexible email configuration.
