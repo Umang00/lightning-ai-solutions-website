@@ -1205,7 +1205,7 @@ We maintain history of Terms:
 
 **Lightning AI Solutions**
 
-**Founder & CEO:** Umang Patel
+**Founder & CEO:** Umang Thakkar
 
 **Email:** umang@lightningaisolutions.in
 

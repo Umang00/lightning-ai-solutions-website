@@ -82,7 +82,7 @@ export async function GET() {
     <item>
       <title>${escapeXml('About Lightning AI Solutions')}</title>
       <link>${baseUrl}/about</link>
-      <description>${escapeXml('Founded in 2025, Lightning AI Solutions helps startups and SMBs integrate intelligent AI systems. Led by Umang Thakkar with 4+ years of AI product development experience.')}</description>
+      <description>${escapeXml('Founded in October 2025 by Umang Thakkar (Founder & CEO), Lightning AI Solutions is an applied AI company developing proprietary products like Astro AI and engineering scalable AI solutions for startups and enterprises.')}</description>
       <pubDate>${currentDate}</pubDate>
       <guid>${baseUrl}/about</guid>
     </item>

@@ -7,13 +7,17 @@ export const COMPANY = {
   pincode: "388001",
   email: "umang@lightningaisolutions.in",
   phone: "+91 9426154668",
-  founded: "2025",
+  founded: "October 2025",
+  foundingDate: "2025-10-01",
+  website: "https://www.lightningaisolutions.in",
+  stage: "Early-Stage Applied AI Venture",
 } as const;
 
 // Founder Information
 export const FOUNDER = {
   name: "Umang Thakkar",
-  title: "AI Product Manager & Builder",
+  title: "Founder & CEO",
+  role: "Founder & CEO | AI Systems Architect",
   experience: "4+",
   linkedin: "https://www.linkedin.com/in/umang-thakkar-90a4a5164/",
 } as const;

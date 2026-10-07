@@ -1,10 +1,15 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.warn("RESEND_API_KEY is not set. Contact form submission logged locally.");
+      return NextResponse.json({ success: true, message: "Logged (dev mode)" });
+    }
+
+    const resend = new Resend(apiKey);
     const body = await request.json();
     const { name, email, company, service, budget, message } = body;
 

@@ -27,7 +27,7 @@ export function FounderProfile() {
             </span>
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            The mind behind 7+ AI products serving 5M+ users
+            Founder & CEO leading applied AI engineering and scalable intelligent ventures
           </p>
         </motion.div>
 
@@ -87,24 +87,15 @@ export function FounderProfile() {
             className="lg:col-span-2 space-y-6 text-text-secondary"
           >
             <p className="text-lg">
-              Umang Thakkar is a product-focused AI engineer with {FOUNDER.experience} years of
-              hands-on experience building AI solutions that actually ship. From LLM fine-tuning to
-              voice agent deployment, he's delivered products that drive measurable business impact.
+              Umang Thakkar is the Founder & CEO of Lightning AI Solutions. With {FOUNDER.experience} years of hands-on experience building, architecting, and scaling production AI systems, Umang founded Lightning AI Solutions in October 2025 to build high-impact proprietary AI software and deliver high-velocity AI engineering for venture-backed startups and enterprises.
             </p>
 
             <p>
-              His journey into AI started with a simple question: "How can we make AI work for real
-              businesses, not just in research papers?" This curiosity led him to build 7+ AI
-              products from scratch, including Astro AI (a WhatsApp-based Vedic astrology platform
-              that boosted engagement by 200%), voice interview agents handling 100+ daily
-              conversations, and custom LLM solutions reducing operational costs by 70%.
+              His background merges deep technical engineering with an obsessive product mindset. Over his career, he has architected and delivered 7+ commercial AI products from concept to production scale, including Astro AI (a WhatsApp-based Vedic astrology platform delivering 200% engagement uplifts), voice interview agents handling 100+ daily autonomous conversations, and custom enterprise LLM pipelines reducing operational costs by 70%.
             </p>
 
             <p>
-              What sets Umang apart isn't just technical chops—it's his product mindset. He doesn't
-              just build models; he builds experiences. Every project starts with understanding the
-              user problem deeply, then finding the simplest AI solution that delivers maximum
-              value.
+              Under his leadership, Lightning AI Solutions operates with relentless execution speed: shipping production-ready systems in weeks rather than months, enforcing enterprise-grade security and data privacy, and measuring success solely by business outcomes, user retention, and customer ROI.
             </p>
 
             <div className="grid grid-cols-2 gap-6 py-8">

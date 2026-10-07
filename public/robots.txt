@@ -1,30 +1,76 @@
 # robots.txt for Lightning AI Solutions
 # https://www.lightningaisolutions.in
+# LLMs.txt standard: https://www.lightningaisolutions.in/llms.txt
 
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemap location
 Sitemap: https://www.lightningaisolutions.in/sitemap.xml
 
-# Explicitly allow major AI crawlers
+# AEO & LLM Crawler Optimization: Explicitly allow all major AI bots and crawlers
+
+# OpenAI (ChatGPT, SearchGPT, GPT-4)
 User-agent: GPTBot
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic (Claude, Claude 3.5, Claude Sonnet/Opus)
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: CCBot
+User-agent: anthropic-ai
 Allow: /
 
-User-agent: Bingbot
+User-agent: Claude-Web
 Allow: /
 
+# Google (Gemini, Google Search, Google Extended)
 User-agent: Googlebot
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI (LLaMA)
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Microsoft & Bing (Copilot)
+User-agent: Bingbot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Amazon AI
+User-agent: Amazonbot
+Allow: /
+
+# ByteDance
+User-agent: Bytespider
+Allow: /
+
+# Common Crawl & Web Knowledge Graphs
+User-agent: CCBot
+Allow: /
+
+User-agent: Diffbot
 Allow: /

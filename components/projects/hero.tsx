@@ -38,7 +38,7 @@ export function ProjectsHero({ selectedCategory, setSelectedCategory }: Projects
           className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-700/50 border border-primary-blue/30 mb-6 sm:mb-8"
         >
           <Sparkles className="h-3 w-3 sm:h-4 sm:w-4 text-primary-yellow flex-shrink-0" />
-          <span className="text-xs sm:text-sm text-text-secondary">Our Portfolio</span>
+          <span className="text-xs sm:text-sm text-text-secondary">Production Deployments & Ventures</span>
         </motion.div>
 
         <motion.h1

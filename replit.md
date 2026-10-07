@@ -48,6 +48,14 @@ The project utilizes Next.js 14 (App Router) with TypeScript and Tailwind CSS fo
 
 ## Recent Changes
 
+### October 2025 - Company Positioning, Founder Identity & Advanced AEO / AI Crawler Standards
+- **Founder Correction:** Corrected founder name from `Umang Patel` to `Umang Thakkar` across legal terms, privacy policies, and schema markups. Standardized title to `Founder & CEO`.
+- **Founding Date Consistency:** Explicitly set company founding date to `October 2025` across all constants, schemas, narratives, machine endpoints, and timelines.
+- **Startup Positioning:** Re-architected project case studies and About page from freelance/contractor framing to high-velocity AI venture studio & applied engineering lab. Added Startup Factsheet to About page.
+- **AEO & LLMs.txt Standard:** Implemented official `llms.txt` standard (similar to Flexionics) with machine-readable company overview, tech architecture, verified metrics, and citation standards.
+- **Full AI Bot Access:** Expanded `robots.txt` to explicitly allow all premier AI agents/crawlers (GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, anthropic-ai, Claude-Web, Googlebot, Google-Extended, PerplexityBot, Applebot, Applebot-Extended, Diffbot, CCBot, Meta-ExternalAgent, Bytespider, Amazonbot, cohere-ai, Bingbot).
+- **Build Stabilization:** Guarded contact route against build-time initialization errors when `RESEND_API_KEY` is not provided. Verified production build compiles 100% cleanly.
+
 ### November 6, 2025 - SEO & AI Crawler Optimization
 - **SEO Infrastructure:** Created reusable `StructuredData` component (JSON-LD schemas) and `MetaTags` helper for consistent metadata across all pages.
 - **AI Crawler Support:** Added `/ai` machine-readable page with JSON company overview, technical stack, and citation format for AI search engines.

@@ -28,14 +28,16 @@
 
 ## 🎯 About
 
-Lightning AI Solutions is a modern, fully responsive corporate website designed to:
+Founded in **October 2025** by **Umang Thakkar** (Founder & CEO), Lightning AI Solutions is an applied artificial intelligence company and product engineering lab. The platform operates on a dual-engine model: incubating proprietary consumer AI products (like **Astro AI**) while engineering custom production-ready AI systems (voice agents, domain LLM fine-tuning, RAG pipelines) for venture-backed startups and enterprises.
 
-- **Showcase AI/Automation Expertise**: Demonstrate capabilities in AI integration, automation, and intelligent solutions
+- **Dual-Engine Operating Model**: Proprietary vertical AI ventures + high-velocity applied AI engineering
+- **Showcase AI/Automation Expertise**: Demonstrate capabilities in AI integration, fine-tuning, voice agents, and intelligent solutions
 - **Generate B2B Leads**: Professional platform for consulting and custom development services
 - **WhatsApp Business API Compliance**: Built with comprehensive legal pages to meet WhatsApp Business API requirements
-- **Establish Credibility**: Portfolio of projects, case studies, and client testimonials
+- **Establish Credibility**: Production deployments, case studies, and audited client ROI metrics
+- **AI Crawler & Machine-Readable Friendly**: Complete implementation of `llms.txt`, permissive `robots.txt`, XML sitemap, and RSS feed
 
-This project serves as both a marketing platform and a technical demonstration of modern web development practices.
+This project serves as both a company platform and a technical demonstration of modern web and AI engineering practices.
 
 ---
 
@@ -386,12 +388,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📧 Contact
+## 📧 Contact & Leadership
 
 **Lightning AI Solutions**
-
-- Website: [lightningaisolutions.in](https://lightningaisolutions.in)
+- Founder & CEO: **Umang Thakkar**
+- Website: [lightningaisolutions.in](https://www.lightningaisolutions.in)
 - Email: umang@lightningaisolutions.in
+- Founder LinkedIn: [Umang Thakkar](https://www.linkedin.com/in/umang-thakkar-90a4a5164/)
 - GitHub: [@Umang00](https://github.com/Umang00)
 
 ---

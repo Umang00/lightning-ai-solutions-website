@@ -29,7 +29,7 @@ export function ProjectGrid() {
             </span>
           </h2>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            Explore our diverse portfolio of AI solutions across industries
+            Explore our commercial AI solutions and deployed systems across industries
           </p>
         </motion.div>
 

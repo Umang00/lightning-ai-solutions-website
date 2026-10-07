@@ -103,13 +103,15 @@ export default function RootLayout({
                 email: "umang@lightningaisolutions.in",
               },
               sameAs: [
-                "https://linkedin.com/company/lightningai",
-                "https://twitter.com/lightningai",
+                "https://www.linkedin.com/in/umang-thakkar-90a4a5164/",
+                "https://github.com/Umang00",
               ],
+              foundingDate: "2025-10-01",
               founder: {
                 "@type": "Person",
                 name: "Umang Thakkar",
-                jobTitle: "AI Product Manager & Builder",
+                jobTitle: "Founder & CEO",
+                url: "https://www.linkedin.com/in/umang-thakkar-90a4a5164/",
               },
               areaServed: "Worldwide",
               serviceType: [

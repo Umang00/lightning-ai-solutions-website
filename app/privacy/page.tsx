@@ -518,7 +518,7 @@ Anand, Gujarat, India - 388001
 **16.2 Data Protection Officer (DPO)**
 
 For data protection inquiries:
-**Name:** Umang Patel (Founder/DPO)
+**Name:** Umang Thakkar (Founder & CEO / DPO)
 **Email:** umang@lightningaisolutions.in
 
 **16.3 Response Time**

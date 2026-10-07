@@ -35,11 +35,12 @@ export function StructuredData({ type, data }: StructuredDataProps) {
             "https://github.com/Umang00",
             "https://www.linkedin.com/in/umang-thakkar-90a4a5164/"
           ],
-          "foundingDate": "2025",
+          "foundingDate": "2025-10-01",
           "founder": {
             "@type": "Person",
             "name": "Umang Thakkar",
-            "jobTitle": "AI Product Manager & Builder"
+            "jobTitle": "Founder & CEO",
+            "url": "https://www.linkedin.com/in/umang-thakkar-90a4a5164/"
           },
           "areaServed": "Worldwide",
           "serviceType": [

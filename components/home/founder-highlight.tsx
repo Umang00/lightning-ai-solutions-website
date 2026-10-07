@@ -49,29 +49,26 @@ export function FounderHighlight() {
             transition={{ duration: 0.8 }}
           >
             <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-primary-blue/10 border border-primary-blue/30 mb-4 sm:mb-6">
-              <span className="text-xs sm:text-sm text-primary-blue font-semibold">Meet the Founder</span>
+              <span className="text-xs sm:text-sm text-primary-blue font-semibold">Leadership & Vision</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
               <span className="text-text-primary">{FOUNDER.name}</span>
             </h2>
 
-            <h3 className="text-lg sm:text-xl text-text-secondary mb-4 sm:mb-6">{FOUNDER.title}</h3>
+            <h3 className="text-lg sm:text-xl text-primary-blue font-medium mb-4 sm:mb-6">
+              {FOUNDER.title} • Founded October 2025
+            </h3>
 
             <div className="space-y-3 sm:space-y-4 text-sm sm:text-base text-text-secondary mb-6 sm:mb-8">
               <p>
-                With over {FOUNDER.experience} years of hands-on experience building AI products,
-                Umang has led the development of 7+ successful AI solutions from concept to
-                production.
+                Umang Thakkar is the Founder & CEO of Lightning AI Solutions. With over {FOUNDER.experience} years of hands-on experience architecting and launching production AI software, he founded the company in October 2025 to bridge frontier AI research with real-world, scalable business value.
               </p>
               <p>
-                From fine-tuning large language models to deploying voice agents that handle
-                100+ daily interviews, Umang combines deep technical expertise with a product-first
-                mindset to deliver AI solutions that truly scale.
+                Under his direction, Lightning AI Solutions operates as an applied AI powerhouse—incubating category-defining proprietary ventures like Astro AI while engineering mission-critical AI systems for venture-backed startups and enterprises.
               </p>
               <p>
-                His work has driven 200% engagement increases, 70% cost reductions, and powered
-                platforms serving 5M+ users.
+                His deployments have delivered verified business impact: 7+ production launches, 5M+ impacted users, 200% engagement increases, and 70% operational cost reductions.
               </p>
             </div>
 
